@@ -94,8 +94,8 @@ if(isset($_POST['submit'])) {
 
 //insert data
 $result = mysqli_query($link, "INSERT INTO post
-(service_name, description, location, area, price,contact, uploadpicture, user_id) VALUES 
-('$service_name','$desc','$location','$area','$price','$contactno', '$upload', '$userId')");
+(service_name, description, location, area, price,contact, uploadpicture, user_id, type) VALUES 
+('$service_name','$desc','$location','$area','$price','$contactno', '$upload', '$userId', '$service')");
 
 //data successfully added
 	 if ($result)
