@@ -8,7 +8,6 @@ session_start();
         <span class="text">Services</span>
         <i class="dropdown icon"></i>
         <div class="menu">
-            <div class="header">Categories</div>
             <a class="item" href="searchType.php?type=Agent&page=1">Agent</a>
             <a class="item" href="searchType.php?type=Consultant&page=1">Consultant</a>
             <a class="item" href="searchType.php?type=Insturctor&page=1">Insturctor</a>
@@ -22,145 +21,21 @@ session_start();
         <span class="text">Location</span>
         <i class="dropdown icon"></i>
         <div class="menu">
-            
-            <div class="item">Kuala Lumpur</div>
-            <div class="item">Entire Malaysia</div>
-            <div class="divider"></div> <!--seperator-->
-			
-			<div class="item">   <!-- opening selection of state-->
-                <i class="dropdown icon"></i>
-				<span class="text">Johor</span>
-                <div class="menu">
-                    <div class="item">Johor Bahru</div>
-                    <div class="item">Batu Pahat</div>
-                </div>
-                
-            </div>
-			
-			<div class="item">
-                <i class="dropdown icon"></i>
-				<span class="text">Kedah</span>
-                <div class="menu">
-                    <div class="item">Alor Setar</div>
-                    <div class="item">Sungai Petani</div>
-                </div>
-                
-            </div>
-			
-			<div class="item">
-                <i class="dropdown icon"></i>
-				<span class="text">Kelantan</span>
-                <div class="menu">
-                    <div class="item">Jeli</div>
-                    <div class="item">Kota Bharu</div>
-                </div>
-                
-            </div>
-			
-			<div class="item">
-                <i class="dropdown icon"></i>
-				<span class="text">Melaka</span>
-                <div class="menu">
-                    <div class="item">Alor Gajah</div>
-                    <div class="item">Masjid Tanah</div>
-                </div>
-                
-            </div>
-			
-			<div class="item">
-                <i class="dropdown icon"></i>
-				<span class="text">Negeri Sembilan</span>
-                <div class="menu">
-                    <div class="item">Seremban</div>
-                    <div class="item">Tampin</div>
-                </div>
-                
-            </div>
-			
-			<div class="item">
-                <i class="dropdown icon"></i>
-				<span class="text">Pahang</span>
-                <div class="menu">
-                    <div class="item">Bandar Pusat Jengka</div>
-                    <div class="item">Genting Highland</div>
-                </div>
-                
-            </div>
-			
-			<div class="item">
-                <i class="dropdown icon"></i>
-				<span class="text">Penang</span>
-                <div class="menu">
-                    <div class="item">Georgetown</div>
-                    <div class="item">Balik Pulau</div>
-                </div>
-                
-            </div>
-			
-			<div class="item">
-                <i class="dropdown icon"></i>
-				<span class="text">Perak</span>
-                <div class="menu">
-                    <div class="item">Ipoh</div>
-                    <div class="item">Kampar</div>
-                </div>
-                
-            </div>
-			
-			<div class="item">
-                <i class="dropdown icon"></i>
-				<span class="text">Perlis</span>
-                <div class="menu">
-                    <div class="item">Kuala Perlis</div>
-                    <div class="item">Padang Besar</div>
-                </div>
-                
-            </div>
-			
-			<div class="item">Putrajaya</div>
-			
-			<div class="item">
-                <i class="dropdown icon"></i>
-				<span class="text">Selangor</span>
-                <div class="menu">
-                    <div class="item">Bandar Kinrara</div>
-                    <div class="item">Bandar Sunway</div>
-                </div>
-                
-            </div>
-			
-			<div class="item">
-                <i class="dropdown icon"></i>
-				<span class="text">Sabah</span>
-                <div class="menu">
-                    <div class="item">Kota Kinabalu</div>
-                    <div class="item">Kota Kinabatangan</div>
-                </div>
-                
-            </div>
-			
-			<div class="item">
-                <i class="dropdown icon"></i>
-				<span class="text">Sarawak</span>
-                <div class="menu">
-                    <div class="item">Bintulu</div>
-                    <div class="item">Kapit</div>
-                </div>
-                
-            </div>
-			
-			<div class="item">
-                <i class="dropdown icon"></i>
-				<span class="text">Terengganu</span>
-                <div class="menu">
-                    <div class="item">Hulu Terengganu</div>
-                    <div class="item">Kuala Terengganu</div>
-                </div>
-                
-            </div>
-			
-			
-            
+            <a href="searchLocation.php?location=1&page=1" class="item" data-value="1">Kuala Lumpur</a>
+            <a href="searchLocation.php?location=2&page=1" class="item" data-value="2">Johor</a>
+            <a href="searchLocation.php?location=3&page=1" class="item" data-value="3">Kedah</a>
+            <a href="searchLocation.php?location=4&page=1" class="item" data-value="4">Kelantan</a>
+            <a href="searchLocation.php?location=5&page=1" class="item" data-value="5">Melaka</a>
+            <a href="searchLocation.php?location=6&page=1" class="item" data-value="6">Negeri Sembilan</a>
+            <a href="searchLocation.php?location=7&page=1" class="item" data-value="7">Pahang</a>
+            <a href="searchLocation.php?location=8&page=1" class="item" data-value="8">Penang</a>
+            <a href="searchLocation.php?location=9&page=1" class="item" data-value="9">Perak</a>
+            <a href="searchLocation.php?location=10&page=1" class="item" data-value="10">Perlis</a>
+            <a href="searchLocation.php?location=11&page=1" class="item" data-value="11">Putrajaya</a>
+            <a href="searchLocation.php?location=12&page=1" class="item" data-value="12">Selangor</a>
+            <a href="searchLocation.php?location=13&page=1" class="item" data-value="13">Sabah</a>
+            <a href="searchLocation.php?location=14&page=1" class="item" data-value="14">Sarawak</a>
+            <a href="searchLocation.php?location=15&page=1" class="item" data-value="15">Terengganu</a>
         </div> <!--closing selection state-->
     </div> <!--closing location-->
 	

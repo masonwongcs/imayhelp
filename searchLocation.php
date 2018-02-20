@@ -54,9 +54,9 @@
                         <?php  
                             include ('connection.php');
 
-                            if (isset($_GET['type']) && isset($_GET['page'])) {
+                            if (isset($_GET['location']) && isset($_GET['page'])) {
                                 $currentPage = $_GET['page'];
-                                $search = $_GET['type'];
+                                $search = $_GET['location'];
                                 
                             } else{
                                 $currentPage = 1;
@@ -64,8 +64,8 @@
                             }
 
                             $offset = ($currentPage - 1) * 16;
-                            $query = "SELECT * FROM `post` WHERE type LIKE '$search%' ORDER BY datetime DESC LIMIT 16 OFFSET $offset";
-                            $countTotalRows = "SELECT COUNT(services_id) FROM `post` WHERE type LIKE '$search%'";
+                            $query = "SELECT * FROM `post` WHERE location LIKE '$search%' ORDER BY datetime DESC LIMIT 16 OFFSET $offset";
+                            $countTotalRows = "SELECT COUNT(services_id) FROM `post` WHERE location LIKE '$search%'";
                             
                             $result = mysqli_query($link, $query);
                             $totalRowsResult = mysqli_query($link, $countTotalRows);
@@ -123,7 +123,7 @@
                                 echo '            RM<span class="price">' . $price . '</span>';
                                 echo '        </span>';
                                 echo '        <span>';
-                                echo '            <i class="like icon"></i><span class="amount">5</span>';
+                                echo '            <i class="like icon"></i><span class="amount">' . $likes .'</span>';
                                 echo '        </span>';
                                 echo '    </div>';
                                 echo ' </div>';
