@@ -30,7 +30,6 @@
               $acc_SSM = $rowEmail[9];
               $company_name = $rowEmail[10];
               $service = $rowEmail[11];
-
             }
           }
         ?>
@@ -45,7 +44,7 @@
                               <input type="text" name="firstname" placeholder="First Name" value="<?php echo $firstName;?>">
                           </div>
                           <div class="field">
-                              <input type="text" name="lastname" placeholder="Last Name">
+                              <input type="text" name="lastname" placeholder="Last Name" value="<?php echo $lastName;?>">
                           </div>
                       </div>
                   </div>
@@ -53,7 +52,7 @@
                       <label>Phone Number</label>
                       <div class="fields">
                           <div class="sixteen wide field">
-                              <input type="tel" name="phone" placeholder="Phone Number">
+                              <input type="tel" name="phone" placeholder="Phone Number" value="<?php echo $mobileNo;?>">
                           </div>
                       </div>
                   </div>
@@ -61,14 +60,14 @@
                       <label>Address</label>
                       <div class="fields">
                           <div class="sixteen wide field">
-                              <input type="text" name="address" placeholder="Street Address">
+                              <input type="text" name="address" placeholder="Street Address" value="<?php echo $address;?>">
                           </div>
                       </div>
                   </div>
                   <div class="field">
                       <label>Location</label>
                       <div class="ui fluid search selection dropdown">
-                          <input type="hidden" name="country">
+                          <input type="hidden" name="country" value="<?php echo $country;?>">
                           <i class="dropdown icon"></i>
                           <div class="default text">Select Location</div>
                           <div class="menu">
@@ -93,7 +92,7 @@
                   <div class="field">
                       <label>Gender</label>
                       <div class="ui fluid search selection dropdown">
-                          <input type="hidden" name="gender">
+                          <input type="hidden" name="gender" value="<?php echo $gender;?>">
                           <i class="dropdown icon"></i>
                           <div class="default text">Select Gender</div>
                           <div class="menu">
@@ -106,7 +105,7 @@
                   <div class="field">
                       <label>Services</label>
                       <div class="ui fluid search selection dropdown">
-                          <input type="hidden" name="services">
+                          <input type="hidden" name="services" value="<?php echo $service;?>">
                           <i class="dropdown icon"></i>
                           <div class="default text">Select Services</div>
                           <div class="menu">
@@ -120,15 +119,9 @@
                           </div>
                       </div>
                   </div>
-                  
-                  <h4 class="ui dividing header">Login Information</h4>
-                      <div class="field">
-                          <input type="text" name="email" placeholder="E-mail address">
-                      </div>
-                      <div class="field">
-                          <input type="password" name="password" placeholder="Password">
-                      </div>
-                  <button class="fluid ui primary button" type="submit" name="submit">Register</button>
+                  <input type="hidden" name="email" placeholder="E-mail address" value="<?php echo $email;?>">
+                  <input type="hidden" name="password" placeholder="Password" value="<?php echo $pwd;?>">
+                  <button class="fluid ui primary button" type="submit" name="submit">Update</button>
               </form>
           </div>
         </div>
