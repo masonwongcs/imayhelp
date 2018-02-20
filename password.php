@@ -47,7 +47,7 @@
             <form class="ui form" action="updatePassword.php" method="post">
                 <h4 class="ui dividing header">Change Password</h4>
                 <div class="field">
-                    <label>Old Password</label>
+                    <label>Old Password</label> 
                     <div class="sixteen wide field ui input">
                         <div class="field">
                             <input type="password" name="oldPassword" placeholder="Old Password">
