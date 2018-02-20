@@ -1,34 +1,3 @@
-<?php 
-    // connect to the database
-    include ('connection.php');
-
-    if (isset($_POST['liked'])) {
-        $postid = $_POST['postid'];
-        $userid = $_POST['userid'];
-        $result = mysqli_query($link, "SELECT * FROM post WHERE services_id=$postid");
-        $row = mysqli_fetch_array($result);
-        $n = $row['likes'];
-
-        mysqli_query($link, "INSERT INTO likes (user_id, services_id) VALUES ($userid, $postid)");
-        mysqli_query($link, "UPDATE post SET likes=$n+1 WHERE services_id=$postid");
-
-        echo $n+1;
-        exit();
-    }
-    if (isset($_POST['unliked'])) {
-        $postid = $_POST['postid'];
-        $userid = $_POST['userid'];
-        $result = mysqli_query($link, "SELECT * FROM post WHERE services_id=$postid");
-        $row = mysqli_fetch_array($result);
-        $n = $row['likes'];
-
-        mysqli_query($link, "DELETE FROM likes WHERE services_id=$postid AND user_id=$userid");
-        mysqli_query($link, "UPDATE post SET likes=$n-1 WHERE services_id=$postid");
-        
-        echo $n-1;
-        exit();
-    }
-?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -51,13 +20,13 @@
                                     <img src="img/mayihu.jpg" alt="banner"/>
                                 </div>
                                 <div class="slide-item items">
-                                    <img src="img/banner1.png" alt="banner"/>
+                                    <img src="img/test1.png" alt="banner"/>
                                 </div>
                                 <div class="slide-item items">
-                                    <img src="img/banner2.png" alt="banner"/>
+                                    <img src="img/test2.jpg" alt="banner"/>
                                 </div>
                                 <div class="slide-item items">
-                                    <img src="img/sv.jpg" alt="banner"/>
+                                    <img src="img/image2.png" alt="banner"/>
                                 </div>
                             </div>
                         </div>
@@ -70,23 +39,37 @@
                             <span>Service</span>
                         </div>
                         <div class="ui center aligned segment">
-                            <a href="searchType.php?type=Agent&page=1">Agent</a>
+                            <a href="#">IT Technician</a>
                         </div>
                         <div class="ui center aligned segment">
-                            <a href="searchType.php?type=Consultant&page=1">Consultant</a>
+                            <a href="#">Workshop</a>
                         </div>
                         <div class="ui center aligned segment">
-                            <a href="searchType.php?type=Insturctor&page=1">Insturctor</a>
+                            <a href="#">Driving Instructor</a>
                         </div>
                         <div class="ui center aligned segment">
-                            <a href="searchType.php?type=Home&page=1">Home and Office</a>
+                            <a href="#">Drivers</a>
                         </div>
                         <div class="ui center aligned segment">
-                            <a href="searchType.php?type=Lifestyle&page=1">Lifestyle</a>
+                            <a href="#">Cleaner</a>
+                        </div>
+
+                        <div class="ui center aligned segment">
+                            <a href="#">Mechanic</a>
                         </div>
                         <div class="ui center aligned segment">
-                            <a href="searchType.php?type=Technician&page=1">Technician</a>
+                            <a href="#">Gym Instructor</a>
                         </div>
+                        <div class="ui center aligned segment">
+                            <a href="#">Plumber</a>
+                        </div>
+                        <div class="ui center aligned segment">
+                            <a href="#">Travel Agents</a>
+                        </div>
+                        <div class="ui center aligned segment">
+                            <a href="#">Insurance-agents</a>
+                        </div>
+
                     </div>
 
                 </div>
@@ -105,19 +88,22 @@
                     </div>
                     <div class="ui divider"></div>
                     <div class="ui four stackable items">
-                        <?php
-                            // include ('connection.php');
+                        
+                        <?php  
+                            include ('connection.php');
 
-                            if (isset($_GET['page'])) {
+                            if (isset($_GET['type']) && isset($_GET['page'])) {
                                 $currentPage = $_GET['page'];
+                                $search = $_GET['type'];
                                 
                             } else{
                                 $currentPage = 1;
+                                $search = "";
                             }
 
                             $offset = ($currentPage - 1) * 16;
-                            $query = "SELECT * FROM `post` ORDER BY datetime DESC LIMIT 16 OFFSET $offset";
-                            $countTotalRows = "SELECT COUNT(services_id) FROM `post`";
+                            $query = "SELECT * FROM `post` WHERE type LIKE '$search%' ORDER BY datetime DESC LIMIT 16 OFFSET $offset";
+                            $countTotalRows = "SELECT COUNT(services_id) FROM `post` WHERE type LIKE '$search%'";
                             
                             $result = mysqli_query($link, $query);
                             $totalRowsResult = mysqli_query($link, $countTotalRows);
@@ -129,29 +115,9 @@
                                 $lastPage = round($totalPage,0,PHP_ROUND_HALF_DOWN);
                             }
 
-                            if (isset($_SESSION['email'])) {
+                            $count = mysqli_num_rows($result);
 
-                                $email = $_SESSION['email'];
-                                $queryEmail = "SELECT * FROM `register_user` WHERE email = '$email'";
-                                $resultEmail = mysqli_query($link, $queryEmail);
-                                while($rowEmail = mysqli_fetch_array($resultEmail, MYSQLI_NUM))
-                                {
-                                  $currentUserId = $rowEmail[0];
-                                  $firstName = $rowEmail[1];
-                                  $lastName = $rowEmail[2];
-                                  $email = $rowEmail[3];
-                                  $pwd = $rowEmail[4];
-                                  $mobileNo = $rowEmail[5];
-                                  $address = $rowEmail[6];
-                                  $country = $rowEmail[7];
-                                  $gender = $rowEmail[8];
-                                  $acc_SSM = $rowEmail[9];
-                                  $company_name = $rowEmail[10];
-                                  $service = $rowEmail[11];
-
-                                }
-                                
-                            }
+                            
 
                             // Return item list to show in index
                             while($row = mysqli_fetch_array($result))
@@ -166,8 +132,6 @@
                                 $type = $row[7];
                                 $uploadedLocation = $row[8];
                                 $userId = $row[9];
-                                $datetime = $row[10];
-                                $likes = $row[11];
 
                                 $imageLocation;
 
@@ -175,18 +139,6 @@
                                     $imageLocation = $uploadedLocation;
                                 } else{
                                     $imageLocation = 'img/image.png';
-                                }
-
-                                if(!isset($currentUserId)){
-                                    $currentUserId = 0;
-                                }
-
-                                $results = mysqli_query($link, "SELECT * FROM likes WHERE user_id=$currentUserId AND services_id=$serviceId");
-
-                                if (mysqli_num_rows($results) == 1 ){
-                                    $active = "active";
-                                } else{
-                                    $active = "";
                                 }
 
                                 echo '<div class="ui fluid item listing-item">';
@@ -206,74 +158,82 @@
                                 echo '        <span class="right floated">';
                                 echo '            RM<span class="price">' . $price . '</span>';
                                 echo '        </span>';
-                                echo '        <span class="like-count">';
-                                echo '            <i class="like icon ' . $active . '" data-services-id="' . $serviceId . '"></i><span class="amount">' . $likes . '</span>';
+                                echo '        <span>';
+                                echo '            <i class="like icon"></i><span class="amount">5</span>';
                                 echo '        </span>';
                                 echo '    </div>';
                                 echo ' </div>';
 
                             }
+
+                            if($count == 0){
+                                 echo '<div class="ui segment">No result found.</div>';
+                            }
+
                         ?>
                         
+
                     </div>
                 </div>
                 <div class="sixteen wide column">
                     <div class="ui right floated pagination menu">
                         <?php
+
+                         if($count != 0){
+
                             if(!($currentPage == 1)){
                                 echo '
-                                    <a href="index.php?page=1" class="icon item">
+                                    <a href="search.php?search=' . $search . '&page=1" class="icon item">
                                         <i class="angle double left icon"></i>
                                     </a>
                                 ';
 
                                 echo '
-                                    <a href="index.php?page=' . ($currentPage - 1) . '" class="icon item">
+                                    <a href="search.php?search=' . $search . '&page=' . ($currentPage - 1) . '" class="icon item">
                                         <i class="angle left icon"></i>
                                     </a>
                                 ';
                             }
-                        ?>
-                        
-                        <?php
+
+
                             if($currentPage == 1 || $currentPage == 2 || $currentPage == 3){
-                                echo '<a href="index.php?page=' . $currentPage . '" class="item disabled">' . $currentPage . '</a>';
-                                echo '<a href="index.php?page=' . ($currentPage + 1) . '" class="item">' . ($currentPage + 1) . '</a>';
-                                echo '<a href="index.php?page=' . ($currentPage + 2) . '" class="item">' . ($currentPage + 2) . '</a>';
+                                echo '<a href="search.php?search=' . $search . '&page=' . $currentPage . '" class="item disabled">' . $currentPage . '</a>';
+                                echo '<a href="search.php?search=' . $search . '&page=' . ($currentPage + 1) . '" class="item">' . ($currentPage + 1) . '</a>';
+                                echo '<a href="search.php?search=' . $search . '&page=' . ($currentPage + 2) . '" class="item">' . ($currentPage + 2) . '</a>';
                                 echo '<div class="disabled item">...</div>';
                             } else if($currentPage > ($lastPage - 3) || $currentPage > ($lastPage - 2) || $currentPage > ($lastPage - 1)){
                                 echo '<div class="disabled item">...</div>';
-                                echo '<a href="index.php?page=' . ($lastPage - 3) . '" class="item ' . (($lastPage - 3) == $currentPage ? 'disabled' : ''). '">' . ($lastPage - 3) . '</a>';
-                                echo '<a href="index.php?page=' . ($lastPage - 2) . '" class="item ' . (($lastPage - 2) == $currentPage ? 'disabled' : ''). '">' . ($lastPage - 2) . '</a>';
-                                echo '<a href="index.php?page=' . ($lastPage - 1) . '" class="item ' . (($lastPage - 1) == $currentPage ? 'disabled' : ''). '">' . ($lastPage - 1) . '</a>';
-                                echo '<a href="index.php?page=' . $lastPage . '" class="item ' . ($lastPage == $currentPage ? 'disabled' : ''). '">' . $lastPage . '</a>';
+                                echo '<a href="search.php?search=' . $search . '&page=' . ($lastPage - 3) . '" class="item ' . (($lastPage - 3) == $currentPage ? 'disabled' : ''). '">' . ($lastPage - 3) . '</a>';
+                                echo '<a href="search.php?search=' . $search . '&page=' . ($lastPage - 2) . '" class="item ' . (($lastPage - 2) == $currentPage ? 'disabled' : ''). '">' . ($lastPage - 2) . '</a>';
+                                echo '<a href="search.php?search=' . $search . '&page=' . ($lastPage - 1) . '" class="item ' . (($lastPage - 1) == $currentPage ? 'disabled' : ''). '">' . ($lastPage - 1) . '</a>';
+                                echo '<a href="search.php?search=' . $search . '&page=' . $lastPage . '" class="item ' . ($lastPage == $currentPage ? 'disabled' : ''). '">' . $lastPage . '</a>';
                             } else {
                                 // echo '<div class="disabled item">...</div>';
-                                echo '<a href="index.php?page=' . ($currentPage - 2) . '" class="item">' . ($currentPage - 2) . '</a>';
-                                echo '<a href="index.php?page=' . ($currentPage - 1) . '" class="item">' . ($currentPage - 1) . '</a>';
-                                echo '<a href="index.php?page=' . $currentPage . '" class="item disabled">' . $currentPage . '</a>';
-                                echo '<a href="index.php?page=' . ($currentPage + 1) . '" class="item">' . ($currentPage + 1) . '</a>';
-                                echo '<a href="index.php?page=' . ($currentPage + 2) . '" class="item">' . ($currentPage + 2) . '</a>';
+                                echo '<a href="search.php?search=' . $search . '&page=' . ($currentPage - 2) . '" class="item">' . ($currentPage - 2) . '</a>';
+                                echo '<a href="search.php?search=' . $search . '&page=' . ($currentPage - 1) . '" class="item">' . ($currentPage - 1) . '</a>';
+                                echo '<a href="search.php?search=' . $search . '&page=' . $currentPage . '" class="item disabled">' . $currentPage . '</a>';
+                                echo '<a href="search.php?search=' . $search . '&page=' . ($currentPage + 1) . '" class="item">' . ($currentPage + 1) . '</a>';
+                                echo '<a href="search.php?search=' . $search . '&page=' . ($currentPage + 2) . '" class="item">' . ($currentPage + 2) . '</a>';
                                 // echo '<div class="disabled item">...</div>';
                             }
-                        ?>
 
-                        <?php
+
                             if(!($currentPage == $lastPage)){
                                 if(!($currentPage > ($lastPage - 3) || $currentPage > ($lastPage - 2) || $currentPage > ($lastPage - 1))){
                                     echo '
-                                        <a href="index.php?page=' . ($currentPage + 1) . '" class="icon item">
+                                        <a href="search.php?search=' . $search . '&page=' . ($currentPage + 1) . '" class="icon item">
                                             <i class="angle right icon"></i>
                                         </a>
                                     ';
 
                                     echo '
-                                        <a href="index.php?page=' . $lastPage .'" class="icon item">
+                                        <a href="search.php?search=' . $search . '&page=' . $lastPage .'" class="icon item">
                                             <i class="angle double right icon"></i>
                                         </a>
                                     ';
                                 }
                             }
+                        }
                         ?>
                     </div>
                 </div>
