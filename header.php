@@ -293,6 +293,10 @@ session_start();
                     <i class="user icon"></i>
                     <span>Profile</span>
                 </a>
+                <a class="item" href="password.php">
+                    <i class="lock icon"></i>
+                    <span>Change Password</span>
+                </a>
                 <a class="item" href="logout.php">
                     <i class="sign out icon"></i>
                     <span>Logout</span>
