@@ -31,7 +31,7 @@ CREATE TABLE `post` (
   `service_name` varchar(30) NOT NULL,
   `description` text NOT NULL,
   `location` varchar(30) NOT NULL,
-  `area` varchar(20) NOT NULL,
+  `area` varchar(50) NOT NULL,
   `price` int(11) NOT NULL,
   `contact` varchar(30) NOT NULL,
   `type` varchar(30) NOT NULL,

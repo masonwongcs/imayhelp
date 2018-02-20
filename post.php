@@ -21,6 +21,7 @@
                         </div>
 						<div class="field">
                             <label>Image</label>
+                            <input type="hidden" name="MAX_FILE_SIZE" value="1048576" /> 
                             <input type="file" name="upload" id="upload" placeholder="Upload an image">
                         </div>
 						
