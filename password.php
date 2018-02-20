@@ -48,7 +48,7 @@
                 <h4 class="ui dividing header">Change Password</h4>
                 <div class="field">
                     <label>Old Password</label>
-                    <div class="fields">
+                    <div class="sixteen wide field ui input">
                         <div class="field">
                             <input type="password" name="oldPassword" placeholder="Old Password">
                         </div>
@@ -56,14 +56,14 @@
                 </div>
                 <div class="field">
                     <label>New Password</label>
-                    <div class="fields">
+                    <div class="sixteen wide field ui input">
                         <div class="field">
                             <input type="password" name="newPassword" placeholder="New Password">
                         </div>
                     </div>
                 </div>
                 <div class="field">
-                    <div class="fields">
+                    <div class="sixteen wide field ui input">
                         <div class="field">
                             <input type="password" name="confirmNewPassword" placeholder="Confirm New Password">
                         </div>
@@ -83,23 +83,28 @@
 <script type="application/javascript" src="js/slider.min.js"></script>
 <script type="application/javascript" src="js/main.js"></script>
 <script>
-  var oldPassword = $('input[name=password]').val();
-  if(oldPassword === $('input[name=oldPassword]').val()){
-    $('.updateBtn').removeClass("disabled");
-    $('input[name=oldPassword]').removeClass('error');
-  } else{
-    $('.updateBtn').addClass("disabled");
-    $('input[name=oldPassword]').addClass('error');
-  }
+  $('input[name=oldPassword]').blur(function(){
+    var oldPassword = $('input[name=password]').val();
+    if(oldPassword === $('input[name=oldPassword]').val()){
+      $('.updateBtn').removeClass("disabled");
+      $('input[name=oldPassword]').parents('.ui.input').removeClass('error');
+    } else{
+      $('.updateBtn').addClass("disabled");
+      $('input[name=oldPassword]').parents('.ui.input').addClass('error');
+    }
+  })
+  
+  $('input[name=newPassword]').blur(function(){
+    var newPassword = $('input[name=newPassword]').val();
+    if(newPassword === $('input[name=confirmNewPassword]').val()){
+      $('.updateBtn').removeClass("disabled");
+      $('input[name=confirmNewPassword]').parents('.ui.input').removeClass('error');
+    } else{
+      $('.updateBtn').addClass("disabled");
+      $('input[name=confirmNewPassword]').parents('.ui.input').addClass('error');
+    }
+  })
 
-  var newPassword = $('input[name=newPassword]').val();
-  if(newPassword === $('input[name=confirmNewPassword]').val()){
-    $('.updateBtn').removeClass("disabled");
-    $('input[name=confirmNewPassword]').removeClass('error');
-  } else{
-    $('.updateBtn').addClass("disabled");
-    $('input[name=confirmNewPassword]').addClass('error');
-  }
 </script>
 </body>
 </html>
