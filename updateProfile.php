@@ -29,10 +29,10 @@ $result = mysqli_query($link, "UPDATE register_user
  if ($result)
 	{
 		//Header is to redirect
-		header ("location:login.php?message=success");
+		// header ("location:login.php?message=success");
 	}
 	else{
-        header ("location:error.php");
+        // header ("location:error.php");
 	}
  mysqli_close($link); 	 
 ?>
