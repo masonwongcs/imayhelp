@@ -34,6 +34,15 @@
           }
         ?>
         <div class="register-form-wrapper">
+          <?php 
+              if (isset($_GET['message'])) {
+                  if($_GET['message'] === 'error'){
+                      echo '<div class="ui red inverted segment">Profile failed to update</div>';
+                  }else{
+                      echo '<div class="ui green inverted segment">Profile update successful</div>';
+                  }
+              }
+          ?>
           <div class="ui segment">
               <form class="ui form" action="updateProfile.php" method="post">
                   <h4 class="ui dividing header">Update User Information</h4>
