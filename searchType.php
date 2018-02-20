@@ -33,45 +33,7 @@
                     </div>
                 </div>
                 <div class="three wide column">
-                    <div class="ui segments">
-                        <div class="ui raised segment">
-                            <span class="ui blue ribbon label">Hot</span>
-                            <span>Service</span>
-                        </div>
-                        <div class="ui center aligned segment">
-                            <a href="#">IT Technician</a>
-                        </div>
-                        <div class="ui center aligned segment">
-                            <a href="#">Workshop</a>
-                        </div>
-                        <div class="ui center aligned segment">
-                            <a href="#">Driving Instructor</a>
-                        </div>
-                        <div class="ui center aligned segment">
-                            <a href="#">Drivers</a>
-                        </div>
-                        <div class="ui center aligned segment">
-                            <a href="#">Cleaner</a>
-                        </div>
-
-                        <div class="ui center aligned segment">
-                            <a href="#">Mechanic</a>
-                        </div>
-                        <div class="ui center aligned segment">
-                            <a href="#">Gym Instructor</a>
-                        </div>
-                        <div class="ui center aligned segment">
-                            <a href="#">Plumber</a>
-                        </div>
-                        <div class="ui center aligned segment">
-                            <a href="#">Travel Agents</a>
-                        </div>
-                        <div class="ui center aligned segment">
-                            <a href="#">Insurance-agents</a>
-                        </div>
-
-                    </div>
-
+                    <?php include('sideNav.php'); ?>
                 </div>
                 <div class="thirteen wide column listing-content">
                     <div class="sixteen wide column">
