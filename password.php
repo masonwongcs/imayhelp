@@ -72,25 +72,6 @@
                 <input type="hidden" name="email" placeholder="E-mail address" value="<?php echo $email;?>">
                 <input type="hidden" name="password" placeholder="Password" value="<?php echo $pwd;?>">
                 <button class="updateBtn fluid ui primary button disabled" type="submit" name="submit">Update Password</button>
-                <script>
-                  var oldPassword = $('input[name=password]').val();
-                  if(oldPassword === $('input[name=oldPassword]').val()){
-                    $('.updateBtn').removeClass("disabled");
-                    $('input[name=oldPassword]').removeClass('error');
-                  } else{
-                    $('.updateBtn').addClass("disabled");
-                    $('input[name=oldPassword]').addClass('error');
-                  }
-
-                  var newPassword = $('input[name=newPassword]').val();
-                  if(newPassword === $('input[name=confirmNewPassword]').val()){
-                    $('.updateBtn').removeClass("disabled");
-                    $('input[name=confirmNewPassword]').removeClass('error');
-                  } else{
-                    $('.updateBtn').addClass("disabled");
-                    $('input[name=confirmNewPassword]').addClass('error');
-                  }
-                </script>
             </form>
           </div>
         </div>
@@ -101,5 +82,24 @@
 <script type="application/javascript" src="js/semantic.min.js"></script>
 <script type="application/javascript" src="js/slider.min.js"></script>
 <script type="application/javascript" src="js/main.js"></script>
+<script>
+  var oldPassword = $('input[name=password]').val();
+  if(oldPassword === $('input[name=oldPassword]').val()){
+    $('.updateBtn').removeClass("disabled");
+    $('input[name=oldPassword]').removeClass('error');
+  } else{
+    $('.updateBtn').addClass("disabled");
+    $('input[name=oldPassword]').addClass('error');
+  }
+
+  var newPassword = $('input[name=newPassword]').val();
+  if(newPassword === $('input[name=confirmNewPassword]').val()){
+    $('.updateBtn').removeClass("disabled");
+    $('input[name=confirmNewPassword]').removeClass('error');
+  } else{
+    $('.updateBtn').addClass("disabled");
+    $('input[name=confirmNewPassword]').addClass('error');
+  }
+</script>
 </body>
 </html>
