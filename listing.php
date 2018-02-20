@@ -112,8 +112,21 @@
                             </span>
                         </div>
                     </div>
+                    <div class="ui horizontal segments">
+                      <div class="ui segment">
+                          <i class="address card outline icon"></i>
+                          <span class="content">
+                              <span class="type"><?php echo $type?></span>
+                          </span>
+                      </div>
+                      <div class="ui segment">
+                          <i class="map marker alternate icon"></i>
+                          <span class="content">
+                              <span class="area"><?php echo $area?></span>
+                          </span>
+                      </div>
+                    </div>
                     <button class="fluid ui primary button call-btn"><i class="call icon"></i><span class="phone-number"><?php echo $contact ?></span></button>
-
                 </div>
             </div>
         </div>
