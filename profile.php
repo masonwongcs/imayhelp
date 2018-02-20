@@ -49,7 +49,7 @@
                 if($firstName != "" || $lastName != ""){
                   include 'profileFormUser.php';
                 } else {
-                  include 'profileFormUser.php';
+                  include 'profileFormCompany.php';
                 }
               ?>
           </div>
