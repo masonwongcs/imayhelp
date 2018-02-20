@@ -21,7 +21,6 @@
                     }
                 }
             ?>
-
             <div class="ui top attached tabular menu">
                 <a class="item active" data-tab="login">Login</a>
                 <a class="item" data-tab="register">User Register</a>
