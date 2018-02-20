@@ -21,7 +21,7 @@
                     }
                 }
             ?>
-            
+
             <div class="ui top attached tabular menu">
                 <a class="item active" data-tab="login">Login</a>
                 <a class="item" data-tab="register">User Register</a>
@@ -232,6 +232,9 @@
         </div>
     </div>
 </div>
+
+test 
+
 <?php include 'footer.php';?>
 <script type="application/javascript" src="js/jquery-3.2.1.min.js"></script>
 <script type="application/javascript" src="js/semantic.min.js"></script>
