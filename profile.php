@@ -34,8 +34,8 @@
           }
         ?>
         <div class="register-form-wrapper">
-          <div class="ui segment" data-tab="register">
-              <form class="ui form" action="register.php" method="post">
+          <div class="ui segment">
+              <form class="ui form" action="updateProfile.php" method="post">
                   <h4 class="ui dividing header">Update User Information</h4>
                   <div class="field">
                       <label>Name</label>
@@ -115,7 +115,6 @@
                               <div class="item" data-value="IT">Home and Office</div>
                               <div class="item" data-value="IT">Lifestyle</div>
                               <div class="item" data-value="IT">Technician</div>
-                              <div class="item" data-value="Mechanic">More Services are coming...</div>
                           </div>
                       </div>
                   </div>

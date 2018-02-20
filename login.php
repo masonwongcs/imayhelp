@@ -127,7 +127,6 @@
                                 <div class="item" data-value="IT">Home and Office</div>
                                 <div class="item" data-value="IT">Lifestyle</div>
                                 <div class="item" data-value="IT">Technician</div>
-                                <div class="item" data-value="Mechanic">More Services are coming...</div>
                             </div>
                         </div>
                     </div>

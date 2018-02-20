@@ -17,13 +17,14 @@ if(isset($_POST['submit'])) {
 	$gender=$_POST['gender'];
 	$email=$_POST['email'];
 	$password=$_POST['password'];
+	$services=$_POST['services'];
 }
 
 
 //insert data
 $result = mysqli_query($link, "INSERT INTO register_user
-(firstname, lastname, email, pwd, mobileno, address, country, gender) VALUES 
-('$firstName','$lastName','$email','$password','$phone','$address', '$country', '$gender')" );
+(firstname, lastname, email, pwd, mobileno, address, country, gender, services) VALUES 
+('$firstName','$lastName','$email','$password','$phone','$address', '$country', '$gender', '$services')" );
 
 //data successfully added
 	 if ($result)
