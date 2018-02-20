@@ -76,7 +76,7 @@ html, body{
 .listing-item{
     position: relative;
     transition-timing-function: ease-in-out;
-    transition-duration: 800ms;
+    transition-duration: 400ms !important;
 }
 
 .listing-item:hover {

@@ -9,86 +9,12 @@ session_start();
         <i class="dropdown icon"></i>
         <div class="menu">
             <div class="header">Categories</div>
-			
-			<div class="item">
-                <i class="dropdown icon"></i>
-                <span class="text">Agent</span>
-                <div class="menu">
-                    <div class="item">Insurance Agent</div>
-                    <div class="item">Travel Angent</div>
-                </div>
-            </div>
-
-            <div class="item">
-                <i class="dropdown icon"></i>
-
-                <span class="text">Consultant</span>
-                <div class="menu">
-               <div class="item">Accounting Consultant</div>
-               <div class="item">Management Consultant</div>
-               <div class="item">Interior Design</div>
-            </div>
-        </div>
-			
-            <div class="item">
-                <i class="dropdown icon"></i>
-                <span class="text">Instructor</span>
-                <div class="menu">
-                    
-                    <div class="item">Driving</div>
-					<div class="item">Fitness</div>
-					<div class="item">Music Instrument</div>
-					<div class="item">Muaythai</div>
-
-                </div>
-            </div>
-
-            <div class="item">
-                <i class="dropdown icon"></i>
-                <span class="text">Home and Office</span>
-                <div class="menu">
-                    <div class="item">Appliance Service and Repair</div>
-                    <div class="item">Cleaning Services</div>
-                    <div class="item">Gardener</div>
-                    <div class="item">Movers Relocators</div>
-                    <div class="item">Lighting and Wiring</div>
-                    <div class="item">Renovation</div>
-                    <div class="item"> Repair Maintenance</div>
-                </div>
-            </div>
-           
-		   <div class="item">
-                <i class="dropdown icon"></i>
-                <span class="text">Lifestyle</span>
-                <div class="menu">
-                    <div class="item">Dee Jay</div>
-					<div class="item">Photographer</div>
-					
-                </div>
-            </div>
-			
-			<div class="item">
-                <i class="dropdown icon"></i>
-                <span class="text">Technician</span>
-                <div class="menu">
-					<div class="item">Aircond</div>
-					<div class="item">CCTV, Security and Alarms</div>
-					<div class="item">Computer, Laptop and Phone repair.</div>
-                    <div class="item">IT Business Solution</div>
-                    <div class="item">Plumber Services</div>
-                    <div class="item">Workshop</div>
-                </div>
-            </div>
-
-            <div class="item">
-                <i class="dropdown icon"></i>
-                <span class="text">Others</span>
-                <div class="menu">
-                    <div class="item">Driver</div>
-                    
-                </div>
-            </div>
-
+            <a class="item" href="searchType.php?type=Agent&page=1">Agent</a>
+            <a class="item" href="searchType.php?type=Consultant&page=1">Consultant</a>
+            <a class="item" href="searchType.php?type=Insturctor&page=1">Insturctor</a>
+            <a class="item" href="searchType.php?type=Home&page=1">Home and Office</a>
+            <a class="item" href="searchType.php?type=Lifestyle&page=1">Lifestyle</a>
+            <a class="item" href="searchType.php?type=Technician&page=1">Technician</a>
         </div>
     </div> <!--closing services-->
 
