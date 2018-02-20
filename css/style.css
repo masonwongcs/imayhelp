@@ -76,12 +76,12 @@ html, body{
 .listing-item{
     position: relative;
     transition-timing-function: ease-in-out;
-    transition-duration: 400ms;
+    transition-duration: 800ms;
 }
 
-.listing-item:hover{
-    transform: translateY(-5px);
-    box-shadow: 0 3px 4px rgba(0,0,0,0.5);
+.listing-item:hover {
+    transform: translateY(-1px);
+    box-shadow: 0 6px 19px rgba(0,0,0,0.2) !important;
 }
 
 .listing-item .image {
