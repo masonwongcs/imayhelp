@@ -43,13 +43,13 @@
                             <div class="active section">Service Category</div>
                         </div>
                         <div class="ui right floated icon basic buttons view-selection">
-                            <div class="ui button card-view"><i class="grid layout icon"></i></div>
-                            <div class="ui button list-view active"><i class="list layout icon"></i></div>
+                            <div class="ui button card-view active"><i class="grid layout icon"></i></div>
+                            <div class="ui button list-view"><i class="list layout icon"></i></div>
                         </div>
                         <div class="clear"></div>
                     </div>
                     <div class="ui divider"></div>
-                    <div class="ui four stackable items">
+                    <div class="ui four stackable cards">
                         
                         <?php  
                             include ('connection.php');
@@ -105,7 +105,7 @@
                                     $imageLocation = 'img/image.png';
                                 }
 
-                                echo '<div class="ui fluid item listing-item">';
+                                echo '<div class="ui fluid card listing-item">';
                                 echo '    <a class="listing-link" href="listing.php?serviceId=' . $serviceId . '">Link To post</a>';
                                 echo '    <div class="image">';
                                 echo '        <img src="' . $imageLocation .'">';
