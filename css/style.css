@@ -105,6 +105,13 @@ html, body{
     left: 10px;
 }
 
+.listing-item.item .like-count{
+    left: initial;
+    right: 0;
+    top: 26px;
+    margin: 0 !important;
+}
+
 .listing-item .like-count.disable{
     opacity: 0.5;
     pointer-events: none;
