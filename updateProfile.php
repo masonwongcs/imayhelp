@@ -23,7 +23,7 @@ if(isset($_POST['submit'])) {
 //insert data
 $result = mysqli_query($link, "UPDATE register_user
 	SET firstname = $firstName, lastname = $lastName, mobileno = $phone, address = $address, country = $country, gender = $gender, services = $services
-	WHERE email = $email" ) or die(mysqli_error($link));
+	WHERE email = '".$email."'" ) or die(mysqli_error($link));
 
 //data successfully added
  if ($result)
