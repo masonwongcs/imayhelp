@@ -64,7 +64,7 @@
                             }
 
                             $offset = ($currentPage - 1) * 16;
-                            $query = "SELECT * FROM `post` WHERE location LIKE '$search%' ORDER BY datetime DESC LIMIT 16 OFFSET $offset";
+                            $query = "SELECT * FROM `post` WHERE location = '$search' ORDER BY datetime DESC LIMIT 16 OFFSET $offset";
                             $countTotalRows = "SELECT COUNT(services_id) FROM `post` WHERE location LIKE '$search%'";
                             
                             $result = mysqli_query($link, $query);
