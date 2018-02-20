@@ -49,24 +49,18 @@
                 <div class="field">
                     <label>Old Password</label> 
                     <div class="sixteen wide field ui input">
-                        <div class="field">
-                            <input type="password" name="oldPassword" placeholder="Old Password">
-                        </div>
+                        <input type="password" name="oldPassword" placeholder="Old Password">
                     </div>
                 </div>
                 <div class="field">
                     <label>New Password</label>
                     <div class="sixteen wide field ui input">
-                        <div class="field">
-                            <input type="password" name="newPassword" placeholder="New Password">
-                        </div>
+                      <input type="password" name="newPassword" placeholder="New Password">
                     </div>
                 </div>
                 <div class="field">
                     <div class="sixteen wide field ui input">
-                        <div class="field">
-                            <input type="password" name="confirmNewPassword" placeholder="Confirm New Password">
-                        </div>
+                      <input type="password" name="confirmNewPassword" placeholder="Confirm New Password">
                     </div>
                 </div>
                 <input type="hidden" name="email" placeholder="E-mail address" value="<?php echo $email;?>">
@@ -94,7 +88,7 @@
     }
   })
   
-  $('input[name=newPassword]').blur(function(){
+  $('input[name=confirmNewPassword]').blur(function(){
     var newPassword = $('input[name=newPassword]').val();
     if(newPassword === $('input[name=confirmNewPassword]').val()){
       $('.updateBtn').removeClass("disabled");
