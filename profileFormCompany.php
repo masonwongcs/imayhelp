@@ -73,7 +73,7 @@
             </div>
         </div>
     </div>
-    <input type="text" name="email" placeholder="E-mail address">
-    <input type="password" name="password" placeholder="Password">
+    <input type="hidden" name="email" placeholder="E-mail address" value="<?php echo $email;?>">
+    <input type="hidden" name="password" placeholder="Password" value="<?php echo $pwd;?>">
     <button class="fluid ui primary button" type="submit" name="submit">Update</button>
 </form>
