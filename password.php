@@ -49,18 +49,18 @@
                 <div class="field">
                     <label>Old Password</label> 
                     <div class="sixteen wide field ui input">
-                        <input type="password" name="oldPassword" placeholder="Old Password">
+                        <input type="password" name="oldPassword" placeholder="Old Password" required="required">
                     </div>
                 </div>
                 <div class="field">
                     <label>New Password</label>
                     <div class="sixteen wide field ui input">
-                      <input type="password" name="newPassword" placeholder="New Password">
+                      <input type="password" name="newPassword" placeholder="New Password" required="required">
                     </div>
                 </div>
                 <div class="field">
                     <div class="sixteen wide field ui input">
-                      <input type="password" name="confirmNewPassword" placeholder="Confirm New Password">
+                      <input type="password" name="confirmNewPassword" placeholder="Confirm New Password" required="required">
                     </div>
                 </div>
                 <input type="hidden" name="email" placeholder="E-mail address" value="<?php echo $email;?>">
