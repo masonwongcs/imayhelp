@@ -121,12 +121,12 @@
                             <i class="dropdown icon"></i>
                             <div class="default text">Select Services</div>
                             <div class="menu">
-                                <div class="item" data-value="IT">Agent</div>
-                                <div class="item" data-value="IT">Consultant</div>
-                                <div class="item" data-value="IT">Insturctor</div>
-                                <div class="item" data-value="IT">Home and Office</div>
-                                <div class="item" data-value="IT">Lifestyle</div>
-                                <div class="item" data-value="IT">Technician</div>
+                                <div class="item" data-value="Agent">Agent</div>
+                                <div class="item" data-value="Consultant">Consultant</div>
+                                <div class="item" data-value="Insturctor">Insturctor</div>
+                                <div class="item" data-value="Home">Home and Office</div>
+                                <div class="item" data-value="Lifestyle">Lifestyle</div>
+                                <div class="item" data-value="Technician">Technician</div>
                             </div>
                         </div>
                     </div>
@@ -185,20 +185,20 @@
                             <div class="default text">Select Location</div>
                             <div class="menu">
                                <div class="item" data-value="1">Kuala Lumpur</div>
-                                    <div class="item" data-value="2">Johor</div>
-                                    <div class="item" data-value="3">Kedah</div>
-									<div class="item" data-value="4">Kelantan</div>
-                                    <div class="item" data-value="5">Melaka</div>
-                                    <div class="item" data-value="6">Negeri Sembilan</div>
-									<div class="item" data-value="7">Pahang</div>
-                                    <div class="item" data-value="8">Penang</div>
-                                    <div class="item" data-value="9">Perak</div>
-									<div class="item" data-value="10">Perlis</div>
-                                    <div class="item" data-value="11">Putrajaya</div>
-                                    <div class="item" data-value="12">Selangor</div>
-									<div class="item" data-value="13">Sabah</div>
-                                    <div class="item" data-value="14">Sarawak</div>
-                                    <div class="item" data-value="15">Terengganu</div>
+                                <div class="item" data-value="2">Johor</div>
+                                <div class="item" data-value="3">Kedah</div>
+								<div class="item" data-value="4">Kelantan</div>
+                                <div class="item" data-value="5">Melaka</div>
+                                <div class="item" data-value="6">Negeri Sembilan</div>
+								<div class="item" data-value="7">Pahang</div>
+                                <div class="item" data-value="8">Penang</div>
+                                <div class="item" data-value="9">Perak</div>
+								<div class="item" data-value="10">Perlis</div>
+                                <div class="item" data-value="11">Putrajaya</div>
+                                <div class="item" data-value="12">Selangor</div>
+								<div class="item" data-value="13">Sabah</div>
+                                <div class="item" data-value="14">Sarawak</div>
+                                <div class="item" data-value="15">Terengganu</div>
                             </div>
                         </div>
                     </div>
@@ -209,13 +209,12 @@
                             <i class="dropdown icon"></i>
                             <div class="default text">Select Services</div>
                             <div class="menu">
-                                <div class="item" data-value="IT">Agent</div>
-                                <div class="item" data-value="IT">Consultant</div>
-                                <div class="item" data-value="IT">Insturctor</div>
-                                <div class="item" data-value="IT">Home and Office</div>
-                                <div class="item" data-value="IT">Lifestyle</div>
-                                <div class="item" data-value="IT">Technician</div>
-                                <div class="item" data-value="Mechanic">More Services are coming...</div>
+                                <div class="item" data-value="Agent">Agent</div>
+                                <div class="item" data-value="Consultant">Consultant</div>
+                                <div class="item" data-value="Insturctor">Insturctor</div>
+                                <div class="item" data-value="Home">Home and Office</div>
+                                <div class="item" data-value="Lifestyle">Lifestyle</div>
+                                <div class="item" data-value="Technician">Technician</div>
                             </div>
                         </div>
                     </div>

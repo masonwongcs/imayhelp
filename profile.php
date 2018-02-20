@@ -118,12 +118,12 @@
                           <i class="dropdown icon"></i>
                           <div class="default text">Select Services</div>
                           <div class="menu">
-                              <div class="item" data-value="IT">Agent</div>
-                              <div class="item" data-value="IT">Consultant</div>
-                              <div class="item" data-value="IT">Insturctor</div>
-                              <div class="item" data-value="IT">Home and Office</div>
-                              <div class="item" data-value="IT">Lifestyle</div>
-                              <div class="item" data-value="IT">Technician</div>
+                              <div class="item" data-value="Agent">Agent</div>
+                              <div class="item" data-value="Consultant">Consultant</div>
+                              <div class="item" data-value="Insturctor">Insturctor</div>
+                              <div class="item" data-value="Home">Home and Office</div>
+                              <div class="item" data-value="Lifestyle">Lifestyle</div>
+                              <div class="item" data-value="Technician">Technician</div>
                           </div>
                       </div>
                   </div>
