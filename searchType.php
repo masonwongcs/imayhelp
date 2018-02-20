@@ -94,6 +94,8 @@
                                 $type = $row[7];
                                 $uploadedLocation = $row[8];
                                 $userId = $row[9];
+                                $datetime = $row[10];
+                                $likes = $row[11];
 
                                 $imageLocation;
 
@@ -121,7 +123,7 @@
                                 echo '            RM<span class="price">' . $price . '</span>';
                                 echo '        </span>';
                                 echo '        <span>';
-                                echo '            <i class="like icon"></i><span class="amount">5</span>';
+                                echo '            <i class="like icon"></i><span class="amount">' . $likes .'</span>';
                                 echo '        </span>';
                                 echo '    </div>';
                                 echo ' </div>';

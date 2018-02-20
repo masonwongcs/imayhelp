@@ -94,6 +94,8 @@
                                 $type = $row[7];
                                 $uploadedLocation = $row[8];
                                 $userId = $row[9];
+                                $datetime = $row[10];
+                                $likes = $row[11];
 
                                 $imageLocation;
 
