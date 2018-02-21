@@ -98,6 +98,11 @@ html, body{
     height: auto;
 }
 
+.listing-item .content{
+    max-height: 105px;
+    overflow: hidden;
+}
+
 .listing-item .listing-link{
     position: absolute;
     font-size: 0;
