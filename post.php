@@ -23,8 +23,10 @@
                             <label>Image</label>
                             <input type="hidden" name="MAX_FILE_SIZE" value="1048576" /> 
                             <input type="file" name="upload" id="upload" placeholder="Upload an image">
-                            <div class="ui small image hide upload-preview-wrapper">
-                              <img class="upload-preview" src="#">
+                            <div class="hide upload-preview-wrapper">
+                                <div class="ui fluid image">
+                                  <img class="upload-preview" src="#">
+                                </div>
                             </div>
                         </div>
 						
