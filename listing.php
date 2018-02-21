@@ -57,8 +57,8 @@
                 while($rowUser = mysqli_fetch_array($resultUser, MYSQLI_NUM))
                 {
                   // $userId = $rowUser[0];
-                  // $firstName = $rowUser[1];
-                  // $lastName = $rowUser[2];
+                  $firstName_listing = $rowUser[1];
+                  $lastName_listing = $rowUser[2];
                   // $email = $rowUser[3];
                   // $pwd = $rowUser[4];
                   // $mobileNo = $rowUser[5];
@@ -69,6 +69,12 @@
                   $company_name_listing = $rowUser[10];
                   // $service = $rowUser[11];
                 } 
+
+                if($firstName_listing != "" || $lastName_listing != ""){
+                    $displayName_listing = $firstName_listing . " " . $lastName_listing;
+                } else {
+                    $displayName_listing = $company_name_listing;
+                }
 
             } else {
                 // Fallback behaviour goes here
@@ -96,7 +102,7 @@
                         <div class="ui segment">
                             <i class="user icon"></i>
                             <span class="content">
-                                <?php echo $company_name_listing?>
+                                <?php echo $displayName_listing?>
                             </span>
                         </div>
                         <div class="ui segment">
