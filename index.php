@@ -147,7 +147,7 @@
 
                                 $imageLocation;
 
-                                if($uploadedLocation !== ""){
+                                if($uploadedLocation !== "uploadpicture/"){
                                     $imageLocation = $uploadedLocation;
                                 } else{
                                     $imageLocation = 'img/image.png';
