@@ -9,6 +9,9 @@ html, body{
     clear: both;
 }
 
+.hide{
+    display: none;
+}
 
 /*Container use to define the fix width of the container*/
 .container{

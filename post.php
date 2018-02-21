@@ -23,6 +23,9 @@
                             <label>Image</label>
                             <input type="hidden" name="MAX_FILE_SIZE" value="1048576" /> 
                             <input type="file" name="upload" id="upload" placeholder="Upload an image">
+                            <div class="ui small image hide upload-preview-wrapper">
+                              <img class="upload-preview" src="#">
+                            </div>
                         </div>
 						
                         <div class="field">
@@ -93,5 +96,23 @@
 <script type="application/javascript" src="js/semantic.min.js"></script>
 <script type="application/javascript" src="js/slider.min.js"></script>
 <script type="application/javascript" src="js/main.js"></script>
+<script>
+    function readURL(input) {
+      if (input.files && input.files[0]) {
+        var reader = new FileReader();
+
+        reader.onload = function(e) {
+          $('.upload-preview').attr('src', e.target.result);
+        }
+
+        reader.readAsDataURL(input.files[0]);
+      }
+    }
+
+    $("#upload").change(function() {
+      readURL(this);
+      $('.upload-preview-wrapper').slideDown();
+    });
+</script>
 </body>
 </html>
