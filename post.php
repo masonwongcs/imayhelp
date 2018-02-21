@@ -111,8 +111,8 @@
             }
 
             reader.readAsDataURL(input.files[0]);
-            return true;
           }
+          return true;
         } else{
             alert('Max file size is 1MB');
             return false;
