@@ -167,8 +167,8 @@
 
                                 echo '<div class="ui fluid card listing-item">';
                                 echo '    <a class="listing-link" href="listing.php?serviceId=' . $serviceId . '">Link To post</a>';
-                                echo '    <div class="image">';
-                                echo '        <img src="' . $imageLocation .'">';
+                                echo '    <div class="image" style="background-image: url(' . $imageLocation . ')">';
+                                // echo '        <img src="' . $imageLocation .'">';
                                 echo '    </div>';
                                 echo '    <div class="content">';
                                 echo '        <div class="header">';
