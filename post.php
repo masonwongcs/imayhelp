@@ -99,23 +99,18 @@
 <script type="application/javascript" src="js/slider.min.js"></script>
 <script type="application/javascript" src="js/main.js"></script>
 <script>
-    function clearFileInput(id) 
-    { 
-        var oldInput = document.getElementById(id); 
-
-        var newInput = document.createElement("input"); 
-
-        newInput.type = "file"; 
-        newInput.id = oldInput.id; 
-        newInput.name = oldInput.name; 
-        newInput.className = oldInput.className; 
-        newInput.style.cssText = oldInput.style.cssText; 
-        // TODO: copy any other relevant attributes 
-
-        oldInput.parentNode.replaceChild(newInput, oldInput); 
-    }
-
-    
+    $('.ui.form').form({
+        fields: {
+          fileInput:{
+            identifier: 'name',
+            rules: [
+              {
+                type : 'empty'
+              }
+            ]
+          }
+        }
+    });
     function readURL(input) {
 
         var MAX_FILE_SIZE = 1048576;
@@ -132,7 +127,8 @@
           return true;
         } else{
             alert('Max file size is 1MB');
-            clearFileInput("#upload");
+            $('.ui.form').form('reset');
+            $('.upload-preview-wrapper').slideUp();
             return false;
         }
     }
