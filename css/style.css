@@ -113,6 +113,10 @@ html, body{
     overflow: hidden;
 }
 
+.listing-item .content.extra{
+    width: 33% !important;
+}
+
 .listing-item .listing-link{
     position: absolute;
     font-size: 0;
