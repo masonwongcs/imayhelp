@@ -102,8 +102,7 @@
     function readURL(input) {
 
         var MAX_FILE_SIZE = 1048576;
-        console.log(input.files[0]);
-        if(input.files[0] <= MAX_FILE_SIZE){
+        if(input.files[0].size <= MAX_FILE_SIZE){
          if (input.files && input.files[0]) {
             var reader = new FileReader();
 
@@ -115,7 +114,7 @@
             return true;
           }
         } else{
-            // alert('Max file size is 1MB');
+            alert('Max file size is 1MB');
             return false;
         }
     }
