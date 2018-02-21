@@ -130,8 +130,12 @@ html, body{
 }
 
 .footer{
-    padding: 4rem 0 4rem 0;
+    padding: 1rem 0 1rem 0;
     background-color: #3498db;
+}
+
+.footer p{
+    text-align: center;
 }
 
 .slider-nav{
