@@ -100,20 +100,31 @@
 <script type="application/javascript" src="js/main.js"></script>
 <script>
     function readURL(input) {
-      if (input.files && input.files[0]) {
-        var reader = new FileReader();
 
-        reader.onload = function(e) {
-          $('.upload-preview').attr('src', e.target.result);
+        var MAX_FILE_SIZE = 1048576;
+
+        if(input.files[0] <= MAX_FILE_SIZE){
+         if (input.files && input.files[0]) {
+            var reader = new FileReader();
+
+            reader.onload = function(e) {
+              $('.upload-preview').attr('src', e.target.result);
+            }
+
+            reader.readAsDataURL(input.files[0]);
+            return true;
+          }
+        } else{
+            alert('Max file size is 1MB');
+            return false;
         }
-
-        reader.readAsDataURL(input.files[0]);
-      }
     }
+     
 
     $("#upload").change(function() {
-      readURL(this);
-      $('.upload-preview-wrapper').slideDown();
+      if(readURL(this)){
+        $('.upload-preview-wrapper').slideDown();
+      }
     });
 </script>
 </body>
