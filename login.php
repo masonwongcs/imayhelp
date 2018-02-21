@@ -79,7 +79,7 @@
                     <div class="field">
                         <label>Location</label>
                         <div class="ui fluid search selection dropdown">
-                            <input type="hidden" name="country">
+                            <input type="hidden" name="country" readonly="readonly">
                             <i class="dropdown icon"></i>
                             <div class="default text">Select Location</div>
                             <div class="menu">
@@ -117,7 +117,7 @@
                     <div class="field">
                         <label>Services</label>
                         <div class="ui fluid search selection dropdown">
-                            <input type="hidden" name="services">
+                            <input type="hidden" name="services" readonly="readonly">
                             <i class="dropdown icon"></i>
                             <div class="default text">Select Services</div>
                             <div class="menu">
@@ -180,7 +180,7 @@
                     <div class="field">
                         <label>Location</label>
                         <div class="ui fluid search selection dropdown">
-                            <input type="hidden" name="location">
+                            <input type="hidden" name="location" readonly="readonly">
                             <i class="dropdown icon"></i>
                             <div class="default text">Select Location</div>
                             <div class="menu">
@@ -205,7 +205,7 @@
                     <div class="field">
                         <label>Services</label>
                         <div class="ui fluid search selection dropdown">
-                            <input type="hidden" name="services">
+                            <input type="hidden" name="services" readonly="readonly">
                             <i class="dropdown icon"></i>
                             <div class="default text">Select Services</div>
                             <div class="menu">

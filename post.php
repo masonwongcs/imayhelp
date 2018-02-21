@@ -37,7 +37,7 @@
                         <div class="field">
                             <label>Location</label>
                             <div class="ui fluid search selection dropdown">
-                                <input type="hidden" name="location">
+                                <input type="hidden" name="location" readonly="readonly">
                                 <i class="dropdown icon"></i>
                                 <div class="default text">Please choose your service area location.</div>
                                 <div class="menu">
@@ -63,7 +63,7 @@
 						 <div class="field">
                             <label>Area</label>
                             <div class="ui fluid search selection dropdown area">
-                                <input type="hidden" name="area">
+                                <input type="hidden" name="area" readonly="readonly">
                                 <i class="dropdown icon"></i>
                                 <div class="default text">Please choose your service area.</div>
                                 <div class="menu">
@@ -99,6 +99,23 @@
 <script type="application/javascript" src="js/slider.min.js"></script>
 <script type="application/javascript" src="js/main.js"></script>
 <script>
+    function clearFileInput(id) 
+    { 
+        var oldInput = document.getElementById(id); 
+
+        var newInput = document.createElement("input"); 
+
+        newInput.type = "file"; 
+        newInput.id = oldInput.id; 
+        newInput.name = oldInput.name; 
+        newInput.className = oldInput.className; 
+        newInput.style.cssText = oldInput.style.cssText; 
+        // TODO: copy any other relevant attributes 
+
+        oldInput.parentNode.replaceChild(newInput, oldInput); 
+    }
+
+    
     function readURL(input) {
 
         var MAX_FILE_SIZE = 1048576;
@@ -115,6 +132,7 @@
           return true;
         } else{
             alert('Max file size is 1MB');
+            clearFileInput("#upload");
             return false;
         }
     }
