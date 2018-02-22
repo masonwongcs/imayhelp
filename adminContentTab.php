@@ -1,8 +1,8 @@
 <div class="ui top attached tabular menu">
-  <div class="active item">Service List</div>
-  <div class="item">User List</div>
+  <div class="active item" data-tab="item">Service List</div>
+  <div class="item" data-tab="user">User List</div>
 </div>
-<div class="ui bottom attached active tab segment">
+<div class="ui bottom attached active tab segment" data-tab="item">
 	<table class="ui celled table">
 	  <thead>
 	    <tr>
@@ -60,7 +60,7 @@
 		 </tbody>
 	</table>
 </div>
-<div class="ui bottom attached tab segment">
+<div class="ui bottom attached tab segment" data-tab="user">
 	<table class="ui celled table">
 	  <thead>
 	    <tr>
