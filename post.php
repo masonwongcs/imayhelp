@@ -148,8 +148,9 @@
         $(this).addClass('disabled');
         $(this).html('<div class="ui active mini inline inverted loader"></div>');
         $('#progress').fadeIn();
-        interval_id = setInterval(function() {
+        uploadInterval = setInterval(function() {
             $.getJSON('progress.php', function(data){
+                console.log(data);
                 //if there is some progress then update
                 if(data)
                 {
@@ -162,9 +163,10 @@
                 //When there is no data the upload is complete
                 else
                 {
-                    // $('#progress').progress({
-                    //   percent: 100
-                    // });
+                    $('#progress').progress({
+                      percent: 100
+                    });
+                    clearInterval(uploadInterval);
                 }
             })
         }, 200);
