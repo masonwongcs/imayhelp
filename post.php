@@ -22,6 +22,7 @@
 						<div class="field">
                             <label>Image</label>
                             <input type="hidden" name="MAX_FILE_SIZE" value="1048576" /> 
+                            <input type="hidden" name="<?php echo ini_get("session.upload_progress.name"); ?>" value="123" />
                             <input type="file" name="upload" id="upload" placeholder="Upload an image">
                             <div class="hide upload-preview-wrapper">
                                 <div class="ui fluid image">
