@@ -69,7 +69,7 @@ if(isset($_POST['submit'])) {
 	$area=$_POST['area'];
 	$price=$_POST['price'];
 	$contactno=$_POST['contactno'];
-	$upload=$target_file;
+	$upload=$target_dir . $newfilename;
 
 
 
