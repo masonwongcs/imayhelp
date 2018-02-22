@@ -113,7 +113,7 @@ html, body{
     overflow: hidden;
 }
 
-.listing-item .content.extra{
+.listing-item.item .content.extra{
     width: 33% !important;
 }
 

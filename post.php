@@ -139,6 +139,11 @@
         $('.upload-preview-wrapper').slideDown();
       }
     });
+
+    $('button[name=submit]').click(function(){
+        $(this).addClass('disabled');
+        $(this).html('<div class="ui active mini inline inverted loader"></div>')
+    });
 </script>
 </body>
 </html>
