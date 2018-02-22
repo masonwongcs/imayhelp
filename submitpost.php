@@ -20,9 +20,10 @@ $temp = explode(".", $_FILES["upload"]["name"]);
 $newfilename = round(microtime(true)) . '.' . end($temp);
 
 if(!file_exists($_FILES['upload']['tmp_name']) || !is_uploaded_file($_FILES['upload']['tmp_name'])){
-	$target_file = $target_dir . basename($newfilename);
-} else{
+	//If no file is uploaded
 	$target_file = $target_dir . basename($_FILES["upload"]["name"]);
+} else{
+	$target_file = $target_dir . basename($newfilename);
 }
 
 $uploadOk = 1;
