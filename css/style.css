@@ -148,6 +148,10 @@ html, body{
     cursor: not-allowed;
 }
 
+#progress{
+    display: none;
+}
+
 .pagination .disabled{
     pointer-events: none;
 }
