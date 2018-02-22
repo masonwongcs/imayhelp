@@ -82,24 +82,24 @@
 	  		<?php
                 include ('connection.php');
 
-                $queryUser = "SELECT * FROM `register_user` ORDER BY datetime DESC";
-                $resultUser = mysqli_query($link, $queryUser);
-
-                // Return item list to show in index
-                while($row = mysqli_fetch_array($resultUser))
+                $queryEmail = "SELECT * FROM `register_user`";
+                $resultEmail = mysqli_query($link, $queryEmail);
+                while($rowEmail = mysqli_fetch_array($resultEmail, MYSQLI_NUM))
                 {
-					$currentUserId = $rowEmail[0];
-					$firstName = $rowEmail[1];
-					$lastName = $rowEmail[2];
-					$email = $rowEmail[3];
-					$pwd = $rowEmail[4];
-					$mobileNo = $rowEmail[5];
-					$address = $rowEmail[6];
-					$country = $rowEmail[7];
-					$gender = $rowEmail[8];
-					$acc_SSM = $rowEmail[9];
-					$company_name = $rowEmail[10];
-					$service = $rowEmail[11];
+                  $currentUserId = $rowEmail[0];
+                  $firstName = $rowEmail[1];
+                  $lastName = $rowEmail[2];
+                  $email = $rowEmail[3];
+                  $pwd = $rowEmail[4];
+                  $mobileNo = $rowEmail[5];
+                  $address = $rowEmail[6];
+                  $country = $rowEmail[7];
+                  $gender = $rowEmail[8];
+                  $acc_SSM = $rowEmail[9];
+                  $company_name = $rowEmail[10];
+                  $service = $rowEmail[11];
+
+                }
 
                     echo '<tr>
 					      <td>' . $currentUserId . '</td>
@@ -120,6 +120,3 @@
 		 </tbody>
 	</table>
 </div>
-<script type="text/javascript">
-	$('.tabular.menu .item').tab();
-</script>
