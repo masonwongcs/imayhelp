@@ -72,12 +72,7 @@ $(document).ready(function () {
         var postId = $(this).data('id');
         $.ajax({
             url: 'deletePost.php?services_id=' + postId,
-            type: 'post',
-            data: {
-                'unliked': 1,
-                'postid': postid,
-                'userid': userid
-            },
+            type: 'get',
             success: function(response){
                
             }
