@@ -153,16 +153,18 @@
                 //if there is some progress then update
                 if(data)
                 {
-                    $('#progress').val((data.bytes_processed / data.content_length) * 100);
+                    $('#progress').progress({
+                      percent: ((data.bytes_processed / data.content_length) * 100)
+                    });
                     // $('#progress-txt').html('Uploading '+ Math.round((data.bytes_processed / data.content_length)*100) + '%');
                 }
 
                 //When there is no data the upload is complete
                 else
                 {
-                    $('#progress').val('100');
-                    // $('#progress-txt').html('Complete');
-                    // stopProgress();
+                    // $('#progress').progress({
+                    //   percent: 100
+                    // });
                 }
             })
         }, 200);
