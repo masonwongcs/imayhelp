@@ -149,8 +149,22 @@
         $(this).html('<div class="ui active mini inline inverted loader"></div>');
         $('#progress').fadeIn();
         interval_id = setInterval(function() {
-            $('#progress').val(<?php include 'progress.php';?> * 100);
-            // $('#progress-txt').html('Uploading '+ Math.round((data.bytes_processed / data.content_length)*100) + '%');
+            $.getJSON('progress.php', function(data){
+                //if there is some progress then update
+                if(data)
+                {
+                    $('#progress').val((data.bytes_processed / data.content_length) * 100);
+                    // $('#progress-txt').html('Uploading '+ Math.round((data.bytes_processed / data.content_length)*100) + '%');
+                }
+
+                //When there is no data the upload is complete
+                else
+                {
+                    // $('#progress').val('100');
+                    // $('#progress-txt').html('Complete');
+                    // stopProgress();
+                }
+            })
         }, 200);
     });
 
