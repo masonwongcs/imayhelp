@@ -145,12 +145,21 @@
     });
 
     $('button[name=submit]').click(function(e){
-        $(this).addClass('disabled');
-        $(this).html('<div class="ui active mini inline inverted loader"></div>');
-        $('#progress').fadeIn();
-        $('#progress').progress({
-          percent: 100
-        });
+        var submitable = true;
+        $('input[required]').each(function(k,i){
+            if($(this).val() === ""){
+                submitable = false;
+            }
+        })
+
+        if(submitable){
+            $(this).addClass('disabled');
+            $(this).html('<div class="ui active mini inline inverted loader"></div>');
+            $('#progress').fadeIn();
+            $('#progress').progress({
+              percent: 100
+            });
+        }
     });
 
 </script>
