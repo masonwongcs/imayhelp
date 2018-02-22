@@ -99,8 +99,6 @@
                   $company_name = $rowEmail[10];
                   $service = $rowEmail[11];
 
-                }
-
                     echo '<tr>
 					      <td>' . $currentUserId . '</td>
 					      <td>' . $firstName . '</td>
