@@ -55,7 +55,7 @@ if(isset($_POST['submit'])) {
 		$newfilename = round(microtime(true)) . '.' . end($temp);
 		// move_uploaded_file($_FILES["file"]["tmp_name"], "../img/imageDirectory/" . $newfilename);
 
-	    if (move_uploaded_file($_FILES["upload"]["tmp_name"], $target_dir . $newfilename)) {
+	    if (move_uploaded_file($_FILES["upload"]["tmp_name"], $target_dir . basename($newfilename))) {
 	        echo "The file ". basename( $_FILES["upload"]["name"]). " has been uploaded.";
 	    } else {
 	        echo "Sorry, there was an error uploading your file.";
@@ -69,7 +69,7 @@ if(isset($_POST['submit'])) {
 	$area=$_POST['area'];
 	$price=$_POST['price'];
 	$contactno=$_POST['contactno'];
-	$upload=$target_dir . $newfilename;
+	$upload= $target_dir . basename($newfilename);
 
 
 
