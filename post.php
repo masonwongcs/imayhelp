@@ -87,6 +87,9 @@
                                 <label>I agree to the Terms and Conditions</label>
                             </div>
                         </div>
+                        <div class="ui indicating progress" id="progress">
+                          <div class="bar"></div>
+                        </div>
                         <button class="ui primary button" type="submit" name="submit">Submit</button>
                     </form>
                 </div>
@@ -145,6 +148,25 @@
         $(this).addClass('disabled');
         $(this).html('<div class="ui active mini inline inverted loader"></div>')
     });
+
+    interval_id = setInterval(function() {
+        $.getJSON('submitpost.php', function(data){
+            //if there is some progress then update
+            if(data)
+            {
+                $('#progress').val((data.bytes_processed / data.content_length) * 100);
+                // $('#progress-txt').html('Uploading '+ Math.round((data.bytes_processed / data.content_length)*100) + '%');
+            }
+
+            //When there is no data the upload is complete
+            else
+            {
+                // $('#progress').val('100');
+                // $('#progress-txt').html('Complete');
+                // stopProgress();
+            }
+        })
+    }, 200);
 </script>
 </body>
 </html>
