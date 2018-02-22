@@ -19,7 +19,12 @@ $target_dir = "uploadpicture/";
 $temp = explode(".", $_FILES["upload"]["name"]);
 $newfilename = round(microtime(true)) . '.' . end($temp);
 
-$target_file = $target_dir . basename($newfilename);
+if(!file_exists($_FILES['upload']['tmp_name']) || !is_uploaded_file($_FILES['upload']['tmp_name'])){
+	$target_file = $target_dir . basename($newfilename);
+} else{
+	$target_file = $target_dir . basename($_FILES["upload"]["name"]));
+}
+
 $uploadOk = 1;
 $imageFileType = strtolower(pathinfo($target_file,PATHINFO_EXTENSION));
 
