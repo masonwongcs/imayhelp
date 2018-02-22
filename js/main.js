@@ -74,7 +74,7 @@ $(document).ready(function () {
             url: 'deletePost.php?services_id=' + postId,
             type: 'get',
             success: function(response){
-               
+               $(this).parents('tr').remove();
             }
         });
     })
