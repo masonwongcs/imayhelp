@@ -52,7 +52,7 @@ if(isset($_POST['submit'])) {
 	} else {
 
 		$temp = explode(".", $_FILES["file"]["name"]);
-		$newfilename = md5($temp) . '.' . end($temp);
+		$newfilename = round(microtime(true)) . '.' . end($temp);
 		// move_uploaded_file($_FILES["file"]["tmp_name"], "../img/imageDirectory/" . $newfilename);
 
 	    if (move_uploaded_file($_FILES["upload"]["tmp_name"], $target_dir . $newfilename)) {
