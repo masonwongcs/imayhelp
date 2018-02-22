@@ -14,7 +14,8 @@
         <div class="ui grid">
             <div class="ten wide column posting-wrapper">
                 <div class="ui segment">
-                    <form class="ui form" action="submitpost.php" method="post" enctype="multipart/form-data">
+                    <form id="postForm" class="ui form" action="submitpost.php" method="post" enctype="multipart/form-data">
+                        <input type="hidden" value="postForm" name="<?php echo ini_get("session.upload_progress.name"); ?>">
                         <div class="field">
                             <label>Service Title</label>
                             <input type="text" name="service-name" placeholder="Service Title" required="required">
@@ -22,7 +23,6 @@
 						<div class="field">
                             <label>Image</label>
                             <input type="hidden" name="MAX_FILE_SIZE" value="1048576" /> 
-                            <input type="hidden" name="<?php echo ini_get("session.upload_progress.name"); ?>" value="123" />
                             <input type="file" name="upload" id="upload" placeholder="Upload an image">
                             <div class="hide upload-preview-wrapper">
                                 <div class="ui fluid image">
@@ -149,22 +149,8 @@
         $(this).html('<div class="ui active mini inline inverted loader"></div>');
         $('#progress').fadeIn();
         interval_id = setInterval(function() {
-            $.getJSON('progress.php', function(data){
-                //if there is some progress then update
-                if(data)
-                {
-                    $('#progress').val((data.bytes_processed / data.content_length) * 100);
-                    // $('#progress-txt').html('Uploading '+ Math.round((data.bytes_processed / data.content_length)*100) + '%');
-                }
-
-                //When there is no data the upload is complete
-                else
-                {
-                    // $('#progress').val('100');
-                    // $('#progress-txt').html('Complete');
-                    // stopProgress();
-                }
-            })
+            $('#progress').val(<?php include 'progress.php';?> * 100);
+            // $('#progress-txt').html('Uploading '+ Math.round((data.bytes_processed / data.content_length)*100) + '%');
         }, 200);
     });
 
