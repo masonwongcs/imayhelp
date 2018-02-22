@@ -148,7 +148,7 @@
         $(this).addClass('disabled');
         $(this).html('<div class="ui active mini inline inverted loader"></div>');
         $('#progress').fadeIn();
-        $('#example2').progress({
+        $('#progress').progress({
           percent: 100
         });
     });
