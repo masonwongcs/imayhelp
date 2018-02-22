@@ -14,7 +14,12 @@ include ('connection.php');
 
 
 $target_dir = "uploadpicture/";
-$target_file = $target_dir . basename($_FILES["upload"]["name"]);
+
+
+$temp = explode(".", $_FILES["upload"]["name"]);
+$newfilename = round(microtime(true)) . '.' . end($temp);
+
+$target_file = $target_dir . basename($newfilename);
 $uploadOk = 1;
 $imageFileType = strtolower(pathinfo($target_file,PATHINFO_EXTENSION));
 
@@ -50,6 +55,7 @@ if(isset($_POST['submit'])) {
 	    echo "Sorry, your file was not uploaded.";
 	// if everything is ok, try to upload file
 	} else {
+
 	    if (move_uploaded_file($_FILES["upload"]["tmp_name"], $target_file)) {
 	        echo "The file ". basename( $_FILES["upload"]["name"]). " has been uploaded.";
 	    } else {
