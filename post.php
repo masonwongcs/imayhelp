@@ -160,7 +160,7 @@
                 //When there is no data the upload is complete
                 else
                 {
-                    // $('#progress').val('100');
+                    $('#progress').val('100');
                     // $('#progress-txt').html('Complete');
                     // stopProgress();
                 }
