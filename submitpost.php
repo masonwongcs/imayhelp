@@ -51,12 +51,10 @@ if(isset($_POST['submit'])) {
 	// if everything is ok, try to upload file
 	} else {
 
-		$temp = explode(".", $_FILES["upload"]["tmp_name"]);
-		$newfilename = round(microtime(true)) . '.' . end($temp);
-		// move_uploaded_file($_FILES["upload"]["tmp_name"], $target_dir . $newfilename);
+		$temp = explode(".", $_FILES["file"]["name"]);
+		$newfilename = md5($temp) . '.' . end($temp);
+		// move_uploaded_file($_FILES["file"]["tmp_name"], "../img/imageDirectory/" . $newfilename);
 
-	    // if (move_uploaded_file($_FILES["upload"]["tmp_name"], $target_file)) {
-		
 	    if (move_uploaded_file($_FILES["upload"]["tmp_name"], $target_dir . $newfilename)) {
 	        echo "The file ". basename( $_FILES["upload"]["name"]). " has been uploaded.";
 	    } else {
