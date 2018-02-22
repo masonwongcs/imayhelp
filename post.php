@@ -150,6 +150,12 @@
             if($(this).val() === ""){
                 submitable = false;
             }
+            if($(this).is(':checkbox')){
+                if (!$(this).is(':checked')) {
+                    // if not checked
+                    submitable = false;
+                }
+            }
         })
 
         if(submitable){
