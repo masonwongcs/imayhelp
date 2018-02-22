@@ -17,6 +17,7 @@
 		    <th>User</th>
 		    <th>Date</th>
 		    <th>Likes</th>
+		    <th>Action</th>
 		  </tr>
 		</thead>
 	  	<tbody>
