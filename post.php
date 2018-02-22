@@ -15,7 +15,6 @@
             <div class="ten wide column posting-wrapper">
                 <div class="ui segment">
                     <form id="postForm" class="ui form" action="submitpost.php" method="post" enctype="multipart/form-data">
-                        <input type="hidden" value="postForm" name="<?php echo ini_get("session.upload_progress.name"); ?>">
                         <div class="field">
                             <label>Service Title</label>
                             <input type="text" name="service-name" placeholder="Service Title" required="required">
@@ -144,32 +143,39 @@
       }
     });
 
-    $('button[name=submit]').click(function(){
+    $('button[name=submit]').click(function(e){
+        e.preventDefault();
         $(this).addClass('disabled');
         $(this).html('<div class="ui active mini inline inverted loader"></div>');
         $('#progress').fadeIn();
-        uploadInterval = setInterval(function() {
-            $.getJSON('progress.php', function(data){
-                console.log(data);
-                //if there is some progress then update
-                if(data)
-                {
-                    $('#progress').progress({
-                      percent: ((data.bytes_processed / data.content_length) * 100)
-                    });
-                    // $('#progress-txt').html('Uploading '+ Math.round((data.bytes_processed / data.content_length)*100) + '%');
+        $.ajax({
+          xhr: function() {
+            var xhr = new window.XMLHttpRequest();
+
+            xhr.upload.addEventListener("progress", function(evt) {
+              if (evt.lengthComputable) {
+                var percentComplete = evt.loaded / evt.total;
+                percentComplete = parseInt(percentComplete * 100);
+                console.log(percentComplete);
+
+                if (percentComplete === 100) {
+
                 }
 
-                //When there is no data the upload is complete
-                else
-                {
-                    $('#progress').progress({
-                      percent: 100
-                    });
-                    clearInterval(uploadInterval);
-                }
-            })
-        }, 200);
+              }
+            }, false);
+
+            return xhr;
+          },
+          url: "submitpost.php",
+          type: "POST",
+          data: JSON.stringify(fileuploaddata),
+          contentType: "application/json",
+          dataType: "json",
+          success: function(result) {
+            console.log(result);
+          }
+        });
     });
 
 </script>
