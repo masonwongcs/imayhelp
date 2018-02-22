@@ -70,13 +70,17 @@ $(document).ready(function () {
 
     $('.button.delete.post').click(function(){
         var postId = $(this).data('id');
+        var deleteSuccess = false;
         $.ajax({
             url: 'deletePost.php?services_id=' + postId,
             type: 'get',
             success: function(response){
-               $(this).parents('tr').remove();
+              deleteSuccess = true;
             }
         });
+        if(deleteSuccess){
+            $(this).parents('tr').remove();
+        }
     })
 
     // THis function will toggle view (List view or Card view) / switch view mode
