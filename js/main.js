@@ -68,6 +68,22 @@ $(document).ready(function () {
         $(this).toggleClass('active');
     });
 
+    $('.button.delete.post').click(function(){
+        var postId = $(this).data('id');
+        $.ajax({
+            url: 'deletePost.php?services_id=' + postId,
+            type: 'post',
+            data: {
+                'unliked': 1,
+                'postid': postid,
+                'userid': userid
+            },
+            success: function(response){
+               
+            }
+        });
+    })
+
     // THis function will toggle view (List view or Card view) / switch view mode
     function toogleViewSelection(){
         $('.view-selection .button').click(function(){

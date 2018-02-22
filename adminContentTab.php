@@ -53,7 +53,7 @@
 					      <td>' . $userId . '</td>
 					      <td>' . $datetime . '</td>
 					      <td>' . $likes . '</td>
-					      <td><button data-id="' . $serviceId . '" class="ui red button"><i class="trash icon"></i></button></td>
+					      <td><button data-id="' . $serviceId . '" class="ui red icon button delete post"><i class="trash icon"></i></button></td>
 					    </tr>';
                 }
             ?>
