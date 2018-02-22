@@ -77,6 +77,7 @@ CREATE TABLE `register_user` (
 --
 
 INSERT INTO `register_user` (`user_id`, `firstname`, `lastname`, `email`, `pwd`, `mobileno`, `address`, `country`, `gender`, `acc_SSM`, `company_Name`, `services`) VALUES
+(0, NULL, NULL, 'Admin', 'admin123', 0, '0', '1', NULL, '0', 'Admin', 'IT'),
 (1, NULL, NULL, 'company', '123', 12345678, 'jalan balik pulau', '3', NULL, '101', 'company', 'IT'),
 (2, 'Alex', 'Khoo', 'alex', '123', 12345678, 'jalan balik pulau', '5', 'male', NULL, NULL, NULL),
 (3, 'jin', 'lim', 'jin0101@gmail.com', '1234', 165967798, 'bunga raya', '2', 'male', NULL, NULL, NULL),

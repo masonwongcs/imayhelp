@@ -35,7 +35,11 @@
 		    // echo "This is the Members Area
 		    //         ";
 		    // echo "<a href='logout.php'>Logout</a>";
-		    header ("location:index.php");
+		    if($_SESSION['email'] == "Admin"){
+		    	header ("location:admin.php");
+		    } else{
+		    	header ("location:index.php");
+		    }
 		    
 		} else {
 		    //3.2 When the user visits the page first time, simple login form will be displayed.
