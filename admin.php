@@ -46,6 +46,7 @@
                 if (isset($_SESSION['email'])) {
                     if($_SESSION['email'] == "Admin"){
                         //Display admin stuff
+                        include 'adminContentTab.php';
                     } else{
                         echo '<div class="ui red inverted segment">You have no permission to view this page.</div>';
                     }
