@@ -169,9 +169,7 @@
           },
           url: "submitpost.php",
           type: "POST",
-          data: JSON.stringify(fileuploaddata),
-          contentType: "application/json",
-          dataType: "json",
+          data: $('#postForm').serialize(),
           success: function(result) {
             console.log(result);
           }
