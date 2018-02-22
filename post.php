@@ -145,7 +145,6 @@
     });
 
     $('button[name=submit]').click(function(e){
-        e.preventDefault();
         $(this).addClass('disabled');
         $(this).html('<div class="ui active mini inline inverted loader"></div>');
         $('#progress').fadeIn();
