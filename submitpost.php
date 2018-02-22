@@ -50,7 +50,14 @@ if(isset($_POST['submit'])) {
 	    echo "Sorry, your file was not uploaded.";
 	// if everything is ok, try to upload file
 	} else {
-	    if (move_uploaded_file($_FILES["upload"]["tmp_name"], $target_file)) {
+
+		$temp = explode(".", $_FILES["upload"]["tmp_name"]);
+		$newfilename = round(microtime(true)) . '.' . end($temp);
+		// move_uploaded_file($_FILES["upload"]["tmp_name"], $target_dir . $newfilename);
+
+	    // if (move_uploaded_file($_FILES["upload"]["tmp_name"], $target_file)) {
+		
+	    if (move_uploaded_file($_FILES["upload"]["tmp_name"], $target_dir . $newfilename)) {
 	        echo "The file ". basename( $_FILES["upload"]["name"]). " has been uploaded.";
 	    } else {
 	        echo "Sorry, there was an error uploading your file.";
