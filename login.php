@@ -133,7 +133,7 @@
                     
                     <h4 class="ui dividing header">Login Information</h4>
                         <div class="field">
-                            <input type="text" name="email" placeholder="E-mail address">
+                            <input type="email" name="email" placeholder="E-mail address">
                         </div>
                         <div class="field">
                             <input type="password" name="password" placeholder="Password">
@@ -220,7 +220,7 @@
                     </div>
                     <h4 class="ui dividing header">Login Information</h4>
                         <div class="field">
-                            <input type="text" name="email" placeholder="E-mail address">
+                            <input type="email" name="email" placeholder="E-mail address">
                         </div>
                         <div class="field">
                             <input type="password" name="password" placeholder="Password">
