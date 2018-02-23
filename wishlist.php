@@ -80,12 +80,12 @@
                             $resultWishList = mysqli_query($link, $queryWishlist);
 
                             // Return item list to show in index
-                            while($row = mysqli_fetch_array($resultWishList))
+                            while($rowWishlist = mysqli_fetch_array($resultWishList))
                             {
 
-                                $likeIdWishlist = $row[0];
-                                $userIdWishlist = $row[1];
-                                $serviceIdWishlist = $row[2];
+                                $likeIdWishlist = $rowWishlist[0];
+                                $userIdWishlist = $rowWishlist[1];
+                                $serviceIdWishlist = $rowWishlist[2];
 
                                 $query = "SELECT * FROM `post` WHERE services_id = '$serviceIdWishlist' ORDER BY datetime DESC";
                                 $result = mysqli_query($link, $query);
