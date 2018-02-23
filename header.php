@@ -102,6 +102,10 @@ session_start();
                     <i class="user icon"></i>
                     <span>Profile</span>
                 </a>
+                <a class="item" href="wishlist.php">
+                    <i class="heart icon"></i>
+                    <span>Wishlist</span>
+                </a>
                 <a class="item" href="password.php">
                     <i class="lock icon"></i>
                     <span>Change Password</span>
