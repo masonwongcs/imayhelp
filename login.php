@@ -231,9 +231,6 @@
         </div>
     </div>
 </div>
-
-test 
-
 <?php include 'footer.php';?>
 <script type="application/javascript" src="js/jquery-3.2.1.min.js"></script>
 <script type="application/javascript" src="js/semantic.min.js"></script>
