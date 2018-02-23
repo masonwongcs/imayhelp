@@ -76,12 +76,10 @@
                                
                             }
 
-                            echo "CurrentUserId" .$currentUserId;
+                            echo "CurrentUserId : " .$currentUserId;
 
                             $queryWishlist = "SELECT * FROM `likes` WHERE user_id = '$currentUserId'";
                             $resultWishList = mysqli_query($link, $queryWishlist);
-
-                            echo $resultWishList;
 
                             // Return item list to show in index
                             while($rowWishlist = mysqli_fetch_array($resultWishList))
@@ -95,8 +93,7 @@
                                 $result = mysqli_query($link, $query);
 
 
-                                echo "serviceIdWishlist" .$serviceIdWishlist;
-                                echo $result;
+                                echo "serviceIdWishlist : " .$serviceIdWishlist;
 
                                 // Return item list to show in index
                                 while($row = mysqli_fetch_array($result))
