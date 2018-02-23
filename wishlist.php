@@ -76,8 +76,6 @@
                                
                             }
 
-                            echo "CurrentUserId : " .$currentUserId;
-
                             $queryWishlist = "SELECT * FROM `likes` WHERE user_id = '$currentUserId'";
                             $resultWishList = mysqli_query($link, $queryWishlist);
 
@@ -91,9 +89,6 @@
 
                                 $query = "SELECT * FROM `post` WHERE services_id = '$serviceIdWishlist'";
                                 $result = mysqli_query($link, $query);
-
-
-                                echo "serviceIdWishlist : " .$serviceIdWishlist;
 
                                 // Return item list to show in index
                                 while($row = mysqli_fetch_array($result))
