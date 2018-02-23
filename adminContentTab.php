@@ -48,7 +48,7 @@ if($_SESSION['email'] != "Admin"){
                     $likes = $row[11];
 
                     echo '<tr>
-					      <td>' . $serviceId . '</td>
+					      <td><a href="listing.php?serviceId=' . $serviceId . '">' . $serviceId . '</a></td>
 					      <td>' . $serviceName . '</td>
 					      <td>' . $description . '</td>
 					      <td>' . $area . '</td>
