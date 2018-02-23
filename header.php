@@ -89,8 +89,16 @@ session_start();
             <div class="ui pointing dropdown link item company-name">
             <span>' . $displayName . '</span>
             <i class="dropdown icon"></i>
-            <div class="menu">
-                <a class="item" href="profile.php">
+            <div class="menu">';
+
+            if($_SESSION['email'] == "Admin"){
+                echo '<a class="item" href="admin.php">
+                    <i class="address card icon"></i>
+                    <span>Admin Panel</span>
+                </a>';
+            }
+
+            echo  '<a class="item" href="profile.php">
                     <i class="user icon"></i>
                     <span>Profile</span>
                 </a>
