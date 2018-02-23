@@ -86,8 +86,8 @@
                             {
 
                                 $likeIdWishlist = $rowWishlist[0];
-                                $userIdWishlist = $rowWishlist[1];
-                                $serviceIdWishlist = $rowWishlist[2];
+                                $serviceIdWishlist = $rowWishlist[1];
+                                $userIdWishlist = $rowWishlist[2];
 
                                 $query = "SELECT * FROM `post` WHERE services_id = '$serviceIdWishlist'";
                                 $result = mysqli_query($link, $query);
