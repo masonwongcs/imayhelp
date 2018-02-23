@@ -24,6 +24,8 @@ $(document).ready(function () {
 
         $('.listing-content .stackable').addClass('items').removeClass('cards');
         $('.listing-content .listing-item').addClass('item').removeClass('card');
+
+        $('.like-count').attr("data-position", "bottom right");
     }
 
     toogleViewSelection();
@@ -86,6 +88,7 @@ $(document).ready(function () {
             $('.view-selection .button').not($(this)).removeClass('active');
 
             if($(this).hasClass('list-view')){
+                $('.like-count').attr("data-position", "bottom right");
                 if(!($('.listing-content .stackable').hasClass('items'))){
                     $('.listing-content .stackable').addClass('items').removeClass('cards');
                 }
@@ -93,6 +96,7 @@ $(document).ready(function () {
                     $('.listing-content .listing-item').addClass('item').removeClass('card');
                 }
             } else if($(this).hasClass('card-view')){
+                $('.like-count').attr("data-position", "top left");
                 if(!($('.listing-content .stackable').hasClass('cards'))){
                     $('.listing-content .stackable').addClass('cards').removeClass('items');
                 }

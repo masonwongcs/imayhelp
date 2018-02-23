@@ -143,7 +143,7 @@
                                     echo '        <span class="right floated">';
                                     echo '            RM<span class="price">' . $price . '</span>';
                                     echo '        </span>';
-                                    echo '        <span class="like-count">';
+                                    echo '        <span class="like-count" data-inverted="" data-tooltip="Add to Wishlist" data-position="top left" data-variation="mini">';
                                     echo '            <i class="like icon ' . $active . '" data-services-id="' . $serviceId . '"></i><span class="amount">' . $likes . '</span>';
                                     echo '        </span>';
                                     echo '    </div>';
