@@ -1,5 +1,5 @@
-<?php
-if($_SESSION['email'] == "Admin"){
+ <?php
+if($_SESSION['email'] != "Admin"){
 	header ("location:error.php");	
 }
 ?>
