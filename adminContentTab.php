@@ -1,3 +1,8 @@
+<?php
+if($_SESSION['email'] == "Admin"){
+	header ("location:error.php");	
+}
+?>
 <div class="ui top attached tabular menu">
   <div class="active item" data-tab="item">Service List</div>
   <div class="item" data-tab="user">User List</div>
