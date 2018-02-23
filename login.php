@@ -32,13 +32,13 @@
                         <div class="field full-width">
                             <div class="ui left icon input">
                                 <i class="user icon"></i>
-                                <input type="text" name="email" placeholder="E-mail address">
+                                <input required="required"  type="text" name="email" placeholder="E-mail address">
                             </div>
                         </div>
                         <div class="field full-width">
                             <div class="ui left icon input">
                                 <i class="lock icon"></i>
-                                <input type="password" name="password" placeholder="Password">
+                                <input required="required"  type="password" name="password" placeholder="Password">
                             </div>
                         </div>
                         <button class="fluid ui primary button" type="submit" name="submit">Login</button>
@@ -53,10 +53,10 @@
                         <label>Name</label>
                         <div class="two fields">
                             <div class="field">
-                                <input type="text" name="firstname" placeholder="First Name">
+                                <input required="required"  type="text" name="firstname" placeholder="First Name">
                             </div>
                             <div class="field">
-                                <input type="text" name="lastname" placeholder="Last Name">
+                                <input required="required"  type="text" name="lastname" placeholder="Last Name">
                             </div>
                         </div>
                     </div>
@@ -64,7 +64,7 @@
                         <label>Phone Number</label>
                         <div class="fields">
                             <div class="sixteen wide field">
-                                <input type="tel" name="phone" placeholder="Phone Number">
+                                <input required="required"  type="tel" name="phone" placeholder="Phone Number">
                             </div>
                         </div>
                     </div>
@@ -72,14 +72,14 @@
                         <label>Address</label>
                         <div class="fields">
                             <div class="sixteen wide field">
-                                <input type="text" name="address" placeholder="Street Address">
+                                <input required="required"  type="text" name="address" placeholder="Street Address">
                             </div>
                         </div>
                     </div>
                     <div class="field">
                         <label>Location</label>
                         <div class="ui fluid search selection dropdown">
-                            <input type="hidden" name="country" readonly="readonly">
+                            <input required="required"  type="hidden" name="country" readonly="readonly">
                             <i class="dropdown icon"></i>
                             <div class="default text">Select Location</div>
                             <div class="menu">
@@ -104,7 +104,7 @@
                     <div class="field">
                         <label>Gender</label>
                         <div class="ui fluid search selection dropdown">
-                            <input type="hidden" name="gender">
+                            <input required="required"  type="hidden" name="gender">
                             <i class="dropdown icon"></i>
                             <div class="default text">Select Gender</div>
                             <div class="menu">
@@ -117,7 +117,7 @@
                     <div class="field">
                         <label>Services</label>
                         <div class="ui fluid search selection dropdown">
-                            <input type="hidden" name="services" readonly="readonly">
+                            <input required="required"  type="hidden" name="services" readonly="readonly">
                             <i class="dropdown icon"></i>
                             <div class="default text">Select Services</div>
                             <div class="menu">
@@ -133,10 +133,10 @@
                     
                     <h4 class="ui dividing header">Login Information</h4>
                         <div class="field">
-                            <input type="email" name="email" placeholder="E-mail address">
+                            <input required="required"  type="email" name="email" placeholder="E-mail address">
                         </div>
                         <div class="field">
-                            <input type="password" name="password" placeholder="Password">
+                            <input required="required"  type="password" name="password" placeholder="Password">
                         </div>
                     <button class="fluid ui primary button" type="submit" name="submit">Register</button>
                 </form>
@@ -149,7 +149,7 @@
                         <label>SSM Account</label>
                         <div class="fields">
                             <div class="sixteen wide field">
-                                <input type="text" name="Acc" placeholder="Acc SSM">
+                                <input required="required"  type="text" name="Acc" placeholder="Acc SSM">
                             </div>
                         </div>
                     </div>
@@ -157,7 +157,7 @@
                         <label>Company Name</label>
                         <div class="fields">
                             <div class="sixteen wide field">
-                                <input type="tel" name="name" placeholder="Company Name">
+                                <input required="required"  type="tel" name="name" placeholder="Company Name">
                             </div>
                         </div>
                     </div>
@@ -165,7 +165,7 @@
                         <label>Phone Number</label>
                         <div class="fields">
                             <div class="sixteen wide field">
-                                <input type="tel" name="phone" placeholder="Phone Number">
+                                <input required="required"  type="tel" name="phone" placeholder="Phone Number">
                             </div>
                         </div>
                     </div>
@@ -173,14 +173,14 @@
                         <label>Address</label>
                         <div class="fields">
                             <div class="sixteen wide field">
-                                <input type="text" name="address" placeholder="Street Address">
+                                <input required="required"  type="text" name="address" placeholder="Street Address">
                             </div>
                         </div>
                     </div>
                     <div class="field">
                         <label>Location</label>
                         <div class="ui fluid search selection dropdown">
-                            <input type="hidden" name="location" readonly="readonly">
+                            <input required="required"  type="hidden" name="location" readonly="readonly">
                             <i class="dropdown icon"></i>
                             <div class="default text">Select Location</div>
                             <div class="menu">
@@ -205,7 +205,7 @@
                     <div class="field">
                         <label>Services</label>
                         <div class="ui fluid search selection dropdown">
-                            <input type="hidden" name="services" readonly="readonly">
+                            <input required="required"  type="hidden" name="services" readonly="readonly">
                             <i class="dropdown icon"></i>
                             <div class="default text">Select Services</div>
                             <div class="menu">
@@ -220,10 +220,10 @@
                     </div>
                     <h4 class="ui dividing header">Login Information</h4>
                         <div class="field">
-                            <input type="email" name="email" placeholder="E-mail address">
+                            <input required="required"  type="email" name="email" placeholder="E-mail address">
                         </div>
                         <div class="field">
-                            <input type="password" name="password" placeholder="Password">
+                            <input required="required"  type="password" name="password" placeholder="Password">
                         </div>
                     <button class="fluid ui primary button" type="submit" name="submit">Register</button>
                 </form>
