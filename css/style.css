@@ -65,6 +65,11 @@ html, body{
     background: transparent !important;
 }
 
+.logo{
+    width: 100px !important;
+    height: auto !important;
+}
+
 .post-btn{
     background-color: #89c4c1 !important;
 }

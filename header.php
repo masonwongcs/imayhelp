@@ -3,7 +3,7 @@ session_start();
 ?>
 <div class="ui menu margin-top">
 	
-	<div class="header item"><a href="index.php"><img class="ui fluid image" src="img/logo-new-text.png" ></a></div>
+	<div class="header item"><a href="index.php"><img class="ui fluid image logo" src="img/logo-new-text.png" ></a></div>
     <div class="ui pointing dropdown link item"> <!--opening services-->
         <span class="text">Services</span>
         <i class="dropdown icon"></i>
