@@ -10,10 +10,10 @@ session_start();
         <div class="menu">
             <a class="item" href="searchType.php?type=Agent&page=1">Agent</a>
             <a class="item" href="searchType.php?type=Consultant&page=1">Consultant</a>
-            <a class="item" href="searchType.php?type=Insturctor&page=1">Insturctor</a>
+            <a class="item" href="searchType.php?type=Insturctor&page=1">Instructor</a>
             <a class="item" href="searchType.php?type=Home&page=1">Home and Office</a>
             <a class="item" href="searchType.php?type=Lifestyle&page=1">Lifestyle</a>
-            <a class="item" href="searchType.php?type=Technician&page=1">Technician</a>
+            <a class="item" href="searchType.php?type=ITTechnician&page=1">IT Technician</a>
         </div>
     </div> <!--closing services-->
 

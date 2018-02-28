@@ -71,15 +71,39 @@ $(document).ready(function () {
     });
 
     $('.button.delete.post').click(function(){
+
+
+        //At here $this is $('.button.delete.post')
         var postId = $(this).data('id');
+        //that is to differentiate this selection and child selection
+        //When parse $(this) to child in next function
+        var that = $(this);
+
+        $('.ui.delete.modal').modal({
+            //choice given
+                onDeny    : function(){
+                    return;
+            },
+            onApprove : function() {
+                //$(this) will become $('.ui.delete.modal')
+                //Only call this function when user click ok
+                return deletePost(postId, that); 
+            }
+          })
+          .modal('show');
+    })
+
+    //perform action delete
+    function deletePost(postId, that) { 
         $.ajax({
             url: 'deletePost.php?services_id=' + postId,
             type: 'get',
             success: function(response){
             }
         });
-        $(this).parents('tr').remove();
-    })
+
+        that.parents("tr").remove();
+    }
 
     // THis function will toggle view (List view or Card view) / switch view mode
     function toogleViewSelection(){

@@ -10,7 +10,7 @@
         <a href="searchType.php?type=Consultant&page=1">Consultant</a>
     </div>
     <div class="ui center aligned segment">
-        <a href="searchType.php?type=Insturctor&page=1">Insturctor</a>
+        <a href="searchType.php?type=Insturctor&page=1">Instructor</a>
     </div>
     <div class="ui center aligned segment">
         <a href="searchType.php?type=Home&page=1">Home and Office</a>
@@ -19,6 +19,6 @@
         <a href="searchType.php?type=Lifestyle&page=1">Lifestyle</a>
     </div>
     <div class="ui center aligned segment">
-        <a href="searchType.php?type=Technician&page=1">Technician</a>
+        <a href="searchType.php?type=ITTechnician&page=1">IT Technician</a>
     </div>
 </div>

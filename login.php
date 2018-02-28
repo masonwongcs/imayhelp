@@ -126,7 +126,7 @@
                                 <div class="item" data-value="Insturctor">Insturctor</div>
                                 <div class="item" data-value="Home">Home and Office</div>
                                 <div class="item" data-value="Lifestyle">Lifestyle</div>
-                                <div class="item" data-value="Technician">Technician</div>
+                                <div class="item" data-value="ITTechnician">IT Technician</div>
                             </div>
                         </div>
                     </div>
@@ -214,7 +214,7 @@
                                 <div class="item" data-value="Insturctor">Insturctor</div>
                                 <div class="item" data-value="Home">Home and Office</div>
                                 <div class="item" data-value="Lifestyle">Lifestyle</div>
-                                <div class="item" data-value="Technician">Technician</div>
+                                <div class="item" data-value="Technician">IT Technician</div>
                             </div>
                         </div>
                     </div>

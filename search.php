@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+d<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
@@ -11,27 +11,7 @@
     <div class="container">
         <div class="wrapper">
             <?php include 'header.php';?>
-            <div class="ui grid">
-                <div class="sixteen wide column">
-                    <div class="slider-wrapper">
-                        <div class="slider slider1">
-                            <div class="slides">
-                                <div class="slide-item items">
-                                    <img src="img/mayihu.jpg" alt="banner"/>
-                                </div>
-                                <div class="slide-item items">
-                                    <img src="img/test1.png" alt="banner"/>
-                                </div>
-                                <div class="slide-item items">
-                                    <img src="img/test2.jpg" alt="banner"/>
-                                </div>
-                                <div class="slide-item items">
-                                    <img src="img/image2.png" alt="banner"/>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
+            
                 <div class="three wide column">
                     <?php include('sideNav.php'); ?>
                 </div>

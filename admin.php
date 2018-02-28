@@ -55,6 +55,25 @@
         </div>
     </div>
 <?php include 'footer.php';?>
+<div class="ui basic delete modal">
+  <div class="ui icon header">
+    <i class="archive icon"></i>
+    Delete Confirmation
+  </div>
+  <div class="content">
+    <p>Are you sure you want to delete?</p>
+  </div>
+  <div class="actions">
+    <div class="ui red basic cancel inverted button">
+      <i class="remove icon"></i>
+      No
+    </div>
+    <div class="ui green ok inverted button">
+      <i class="checkmark icon"></i>
+      Yes
+    </div>
+  </div>
+</div>
 <script type="application/javascript" src="js/jquery-3.2.1.min.js"></script>
 <script type="application/javascript" src="js/semantic.min.js"></script>
 <script type="application/javascript" src="js/slider.min.js"></script>
