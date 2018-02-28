@@ -102,6 +102,10 @@ session_start();
                     <i class="user icon"></i>
                     <span>Profile</span>
                 </a>
+                <a class="item" href="mypost.php">
+                    <i class="book icon"></i>
+                    <span>My Post</span>
+                </a>
                 <a class="item" href="wishlist.php">
                     <i class="heart icon"></i>
                     <span>Wishlist</span>

@@ -59,7 +59,7 @@
                   // $userId = $rowUser[0];
                   $firstName_listing = $rowUser[1];
                   $lastName_listing = $rowUser[2];
-                  // $email = $rowUser[3];
+                  $email_listing = $rowUser[3];
                   // $pwd = $rowUser[4];
                   // $mobileNo = $rowUser[5];
                   // $address = $rowUser[6];
@@ -93,7 +93,15 @@
             </div>
             <div class="eight wide column contact-info">
                 <div class="ui segment">
-                    <h2 class="ui header"><?php echo $serviceName ?></h2>
+                    <?php 
+
+                      if($email == $email_listing){
+                        echo '<a href="postEdit.php?serviceId=' . $serviceId . '" class="ui right floated blue icon button edit post"><i class="edit icon"></i></a>';
+                      }
+
+                    ?>
+                    <h2 class="ui left floated header"><?php echo $serviceName ?></h2>
+                    <div class="clear"></div>
                     <div class="sub header">
                        <?php echo $description ?>
                     </div>
