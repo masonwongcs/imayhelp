@@ -73,7 +73,7 @@
                             }
 
                             $offset = ($currentPage - 1) * 16;
-                            $query = "SELECT * FROM `post` ORDER BY datetime DESC LIMIT 16 OFFSET $offset";
+                            $query = "SELECT * FROM `post` WHERE display = 1 ORDER BY datetime DESC LIMIT 16 OFFSET $offset";
                             $countTotalRows = "SELECT COUNT(services_id) FROM `post`";
                             
                             $result = mysqli_query($link, $query);
@@ -125,6 +125,7 @@
                                 $userId = $row[9];
                                 $datetime = $row[10];
                                 $likes = $row[11];
+                                $display = $row[12];
 
                                 $imageLocation;
 

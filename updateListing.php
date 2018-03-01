@@ -38,7 +38,7 @@ while($rowUser = mysqli_fetch_array($resultUser, MYSQLI_NUM))
 //insert data
 $result = mysqli_query($link, "UPDATE post
 	SET service_name = '".$service_name."', description = '".$desc."', location = '".$location."', area = '".$area."', price = '".$price."', contact = '".$contactno."'
-	WHERE user_id = '".$userId."'" ) or die(mysqli_error($link));
+	WHERE services_id = '".$service_id."'" ) or die(mysqli_error($link));
 
 //data successfully added
  if ($result)
@@ -47,7 +47,9 @@ $result = mysqli_query($link, "UPDATE post
 		header ("location:listing.php?serviceId=" . $service_id);
 	}
 	else{
-        header ("location:error.php");
+        // header ("location:error.php");
 	}
  mysqli_close($link); 	 
+
+ $_SESSION['email'] = $email;
 ?>

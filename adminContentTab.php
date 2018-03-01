@@ -21,7 +21,7 @@ if($_SESSION['email'] != "Admin"){
 		    <th>User</th>
 		    <th>Date</th>
 		    <th>Likes</th>
-		    <th>Action</th>
+		    <th colspan="2">Action</th>
 		  </tr>
 		</thead>
 	  	<tbody>
@@ -46,6 +46,13 @@ if($_SESSION['email'] != "Admin"){
                     $userId = $row[9];
                     $datetime = $row[10];
                     $likes = $row[11];
+                    $display = $row[12];
+
+                    if($display == "1"){
+                    	$toggle = "active";
+                    } else{
+                    	$toggle = "";
+                    }
 
                     echo '<tr>
 					      <td><a href="listing.php?serviceId=' . $serviceId . '">' . $serviceId . '</a></td>
@@ -58,6 +65,7 @@ if($_SESSION['email'] != "Admin"){
 					      <td>' . $userId . '</td>
 					      <td>' . $datetime . '</td>
 					      <td>' . $likes . '</td>
+			       		  <td><button data-id="' . $serviceId . '" class="ui toggle button enable-post icon '. $toggle .'"><i class="check square icon"></i></button></td>
 					      <td><button data-id="' . $serviceId . '" class="ui red icon button delete post"><i class="trash icon"></i></button></td>
 					    </tr>';
                 }

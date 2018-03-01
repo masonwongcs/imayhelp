@@ -41,6 +41,7 @@
                   $userId = $row[9];
                   $datetime = $row[10];
                   $likes = $row[11];
+                  $display = $row[12];
 
                     $imageLocation;
 

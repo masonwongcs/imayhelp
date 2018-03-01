@@ -173,10 +173,7 @@
 <script type="application/javascript" src="js/slider.min.js"></script>
 <script type="application/javascript" src="js/main.js"></script>
 <script>
-
-    var location = <?php echo $location; ?>;
-
-    loadAreaByState(location);
+    loadAreaByState('<?php echo $location; ?>');
 
     $('.ui.form').form({
         fields: {

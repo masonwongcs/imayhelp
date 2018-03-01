@@ -11,7 +11,7 @@ d<!DOCTYPE html>
     <div class="container">
         <div class="wrapper">
             <?php include 'header.php';?>
-            
+            <div class="ui grid">
                 <div class="three wide column">
                     <?php include('sideNav.php'); ?>
                 </div>

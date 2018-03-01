@@ -67,7 +67,7 @@
 				      <td>' . $userId . '</td>
 				      <td>' . $datetime . '</td>
 				      <td>' . $likes . '</td>
-				      <td><button data-id="' . $serviceId . '" class="ui blue icon button edit post"><i class="edit icon"></i></button></td>
+				      <td><button <button onclick="window.location.href=\'postEdit.php?serviceId=' . $serviceId . '\'" class="ui blue icon button edit post"><i class="edit icon"></i></button></td>
 				      <td><button data-id="' . $serviceId . '" class="ui red icon button delete post"><i class="trash icon"></i></button></td>
 				    </tr>';
             }

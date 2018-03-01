@@ -93,6 +93,35 @@ $(document).ready(function () {
           .modal('show');
     })
 
+    $('.button.enable-post').click(function(){
+        var toggle = 0;
+
+        if($(this).hasClass("active")){
+            toggle = 0;
+        } else{
+            toggle = 1;
+        }
+
+        //At here $this is $('.button.delete.post')
+        var postId = $(this).data('id');
+        //that is to differentiate this selection and child selection
+        //When parse $(this) to child in next function
+        var that = $(this);
+
+        $('.ui.enable.modal').modal({
+            //choice given
+                onDeny    : function(){
+                    return;
+            },
+            onApprove : function() {
+                //$(this) will become $('.ui.delete.modal')
+                //Only call this function when user click ok
+                return enablePost(postId, that, toggle); 
+            }
+          })
+          .modal('show');
+    })
+
     //perform action delete
     function deletePost(postId, that) { 
         $.ajax({
@@ -103,6 +132,21 @@ $(document).ready(function () {
         });
 
         that.parents("tr").remove();
+    }
+
+    //Perform Enable Post action
+    function enablePost(postId, that, toggle) { 
+        $.ajax({
+            url: 'enablePost.php?services_id=' + postId + '&toggle=' + toggle,
+            type: 'get',
+            success: function(response){
+            }
+        });
+        if((that).hasClass("active")){
+            $(that).removeClass("active");
+        } else{
+            $(that).addClass("active");
+        }
     }
 
     // THis function will toggle view (List view or Card view) / switch view mode
