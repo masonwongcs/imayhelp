@@ -8,17 +8,20 @@ if (isset($_GET['services_id']) && isset($_GET['toggle'])) {
 	echo $services_id;
 	echo $toggle;
 
-	$result = mysqli_query($link, "UPDATE post
-	SET display = '".$toggle."'
-	WHERE services_id = '".$service_id."'" ) or die(mysqli_error($link));
+	$result = mysqli_query($link, "UPDATE post SET display = $toggle WHERE services_id = $services_id" ) or die(mysqli_error($link));
 
 	 if ($result)
 	{
 		//Header is to redirect
-		header ("location:profile.php?message=success");
+		// header ("location:profile.php?message=success");
+
+		 echo "Affected rows: " . mysqli_affected_rows($link);
+
 	}
 	else{
-        header ("location:profile.php?message=error");
+        // header ("location:profile.php?message=error");
+
+        header ("location:error.php");
 	}
 }
 else {
