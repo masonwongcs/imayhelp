@@ -1,9 +1,3 @@
-<html>
-<head>
-    <title>Submit Post</title>
-</head>
-
-<body>
 <?php
 include ('connection.php');
 
@@ -43,14 +37,3 @@ $result = mysqli_query($link, "INSERT INTO register_user
 		}
 	 mysqli_close($link); 	 
 ?>
-<?php echo $_POST["firstname"]; ?>
-<?php echo $_POST["lastname"]; ?>
-<?php echo $_POST["phone"]; ?>
-<?php echo $_POST["address"]; ?>
-<?php echo $_POST["country"]; ?>
-<?php echo $_POST["gender"]; ?>
-<?php echo $_POST["email"]; ?>
-<?php echo $_POST["password"]; ?>
-
-</body>
-</html>

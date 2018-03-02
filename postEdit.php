@@ -5,7 +5,7 @@
     <link rel="stylesheet" href="css/semantic.min.css">
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="css/slider.css">
-    <title>Service Listing</title>
+    <title>Edit Post</title>
 </head>
 <body>
 <div class="container">

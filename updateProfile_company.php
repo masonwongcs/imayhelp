@@ -1,9 +1,3 @@
-<html>
-<head>
-    <title>Submit Post</title>
-</head>
-
-<body>
 <?php
 include ('connection.php');
 
@@ -35,5 +29,3 @@ $result = mysqli_query($link, "UPDATE register_user
 	}
 	mysqli_close($link); 	 
 ?>
-</body>
-</html>

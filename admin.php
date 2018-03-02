@@ -36,7 +36,7 @@
     <link rel="stylesheet" href="css/semantic.min.css">
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="css/slider.css">
-    <title>IHELPYOU</title>
+    <title>Admin Panel</title>
 </head>
 <body>
     <div class="container">
