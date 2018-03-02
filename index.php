@@ -48,6 +48,12 @@
                     <?php include('sideNav.php'); ?>
                 </div>
                 <div class="thirteen wide column listing-content">
+                    <?php
+                    if (isset($_GET['postMessage'])) {
+                        if($_GET['postMessage'] == 'success'){
+                            echo '<div class="ui blue inverted segment post-message">You post will be submit to admin for validation</div>';
+                        }
+                    } ?> 
                     <div class="sixteen wide column">
                         <div class="ui floating breadcrumb home-breadcrumb">
                             <a class="section">Home</a>

@@ -117,7 +117,7 @@ $result = mysqli_query($link, "INSERT INTO post
 			// echo "Records inserted successfully.";
 
 			//Header is to redirect
-			header ("location:index.php?msg='Success'");
+			header ("location:index.php?postMessage=success");
 		}
 		else{
             header ("location:error.php");
