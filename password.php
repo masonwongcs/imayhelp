@@ -79,7 +79,7 @@
 <script>
   $('input[name=oldPassword]').blur(function(){
     var oldPassword = MD5($('input[name=password]').val());
-    if(oldPassword === $('input[name=oldPassword]').val()){
+    if(oldPassword === MD5($('input[name=oldPassword]').val())){
       $('.updateBtn').removeClass("disabled");
       $('input[name=oldPassword]').parents('.ui.input').removeClass('error');
     } else{
