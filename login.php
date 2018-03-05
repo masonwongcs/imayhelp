@@ -53,10 +53,10 @@
                         <label>Name</label>
                         <div class="two fields">
                             <div class="field">
-                                <input required="required"  type="text" name="firstname" placeholder="First Name">
+                                <input required="required"  type="text" name="firstname" placeholder="First Name" pattern="[a-zA-Z]+">
                             </div>
                             <div class="field">
-                                <input required="required"  type="text" name="lastname" placeholder="Last Name">
+                                <input required="required"  type="text" name="lastname" placeholder="Last Name" pattern="[a-zA-Z]+">
                             </div>
                         </div>
                     </div>
@@ -64,7 +64,7 @@
                         <label>Phone Number</label>
                         <div class="fields">
                             <div class="sixteen wide field">
-                                <input required="required"  type="tel" name="phone" placeholder="Phone Number">
+                                <input required="required"  type="tel" name="phone" placeholder="Phone Number" pattern= "[0-9]">
                             </div>
                         </div>
                     </div>
@@ -165,7 +165,7 @@
                         <label>Phone Number</label>
                         <div class="fields">
                             <div class="sixteen wide field">
-                                <input required="required"  type="tel" name="phone" placeholder="Phone Number">
+                                <input required="required"  type="tel" name="phone" placeholder="Phone Number" pattern= "[0-9]">
                             </div>
                         </div>
                     </div>

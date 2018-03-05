@@ -64,7 +64,7 @@
                     </div>
                 </div>
                 <input type="hidden" name="email" placeholder="E-mail address" value="<?php echo $email;?>">
-                <input type="hidden" name="password" placeholder="Password" value="<?php echo $pwd;?>">
+                <input type="hidden" name="password" placeholder="Password" value="<?php echo md5($pwd);?>">
                 <button class="updateBtn fluid ui primary button disabled" type="submit" name="submit">Update Password</button>
             </form>
           </div>
@@ -78,7 +78,7 @@
 <script type="application/javascript" src="js/main.js"></script>
 <script>
   $('input[name=oldPassword]').blur(function(){
-    var oldPassword = $('input[name=password]').val();
+    var oldPassword = MD5($('input[name=password]').val());
     if(oldPassword === $('input[name=oldPassword]').val()){
       $('.updateBtn').removeClass("disabled");
       $('input[name=oldPassword]').parents('.ui.input').removeClass('error');

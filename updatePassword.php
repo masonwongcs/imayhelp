@@ -5,11 +5,13 @@ if(isset($_POST['submit'])) {
 	//assign textbox to variable
 	$newPassword=$_POST['newPassword'];
 	$email=$_POST['email'];
+
+	$hashedPassword = md5($newPassword);
 }
 
 //insert data
 $result = mysqli_query($link, "UPDATE register_user
-	SET pwd = '".$newPassword."'
+	SET pwd = '".$hashedPassword."'
 	WHERE email = '".$email."'" ) or die(mysqli_error($link));
 
 //data successfully added
