@@ -64,7 +64,7 @@
                     </div>
                 </div>
                 <input type="hidden" name="email" placeholder="E-mail address" value="<?php echo $email;?>">
-                <input type="hidden" name="password" placeholder="Password" value="<?php echo md5($pwd);?>">
+                <input type="hidden" name="password" placeholder="Password" value="<?php echo $pwd;?>">
                 <button class="updateBtn fluid ui primary button disabled" type="submit" name="submit">Update Password</button>
             </form>
           </div>
