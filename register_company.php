@@ -11,13 +11,15 @@ if(isset($_POST['submit'])) {
 	$services=$_POST['services'];
 	$email=$_POST['email'];
 	$password=$_POST['password'];
+
+	$hashedPassword = md5($password);
 }
 
 
 //insert data
 $result = mysqli_query($link, "INSERT INTO register_user
 (acc_SSM, company_Name, mobileno, address, country, services, email, pwd) VALUES 
-('$acc','$name','$mobileno','$address','$country','$services', '$email', '$password')" );
+('$acc','$name','$mobileno','$address','$country','$services', '$email', '$hashedPassword')" );
 
 //data successfully added
 	 if ($result)

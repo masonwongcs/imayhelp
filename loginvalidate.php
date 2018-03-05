@@ -7,8 +7,11 @@
         //3.1.1 Assigning posted values to variables.
         $email    = $_POST['email'];
         $password = $_POST['password'];
+
+        $hashedPassword = md5($password);
+        
         //3.1.2 Checking the values are existing in the database or not
-        $query    = "SELECT * FROM `register_user` WHERE email='$email' and pwd='$password'";
+        $query    = "SELECT * FROM `register_user` WHERE email='$email' and pwd='$hashedPassword'";
 
         $result = mysqli_query($link, $query) or die(mysqli_error($link));
         $count = mysqli_num_rows($result);
