@@ -8,6 +8,8 @@ if($_SESSION['email'] != "Admin"){
   <div class="item" data-tab="user">User List</div>
 </div>
 <div class="ui bottom attached active tab segment" data-tab="item">
+	<div class="ui hide green enable-message message">Enabled post <span class="post-id"></span></div>
+	<div class="ui hide red disable-message message">Disabled post <span class="post-id"></span></div>
 	<table class="ui celled table">
 	  <thead>
 	    <tr>

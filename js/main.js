@@ -144,9 +144,18 @@ $(document).ready(function () {
         });
         if((that).hasClass("active")){
             $(that).removeClass("active");
+            $('.disable-message .post-id').text(postId);
+            $('.disable-message').fadeIn();
         } else{
             $(that).addClass("active");
+            $('.disable-message .post-id').text(postId);
+            $('.enable-message').fadeIn();
         }
+
+        setTimeout(function(){
+          $('.enable-message').fadeOut();
+          $('.disable-message').fadeOut();
+        }, 1000);
     }
 
     // THis function will toggle view (List view or Card view) / switch view mode
