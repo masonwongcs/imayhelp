@@ -140,11 +140,11 @@
                         </div>
                         <div class="field">
                             <input required="required" class="confirmPassword" type="password" placeholder="Confirm Password">
-                            <div class="password-error hide ui left pointing red basic label">
+                            <div class="password-error ui pointing red basic label" style="display: none;">
                               Password does not match the confirm password.
                             </div>
                         </div>
-                    <button class="fluid ui primary button disable" type="submit" name="submit">Register</button>
+                    <button class="fluid ui primary button disabled" type="submit" name="submit">Register</button>
                 </form>
             </div>
 			
@@ -233,11 +233,11 @@
                         </div>
                         <div class="field">
                             <input required="required" class="confirmPassword" type="password" placeholder="Confirm Password">
-                            <div class="password-error hide ui left pointing red basic label">
+                            <div class="password-error ui pointing red basic label" style="display: none;">
                               Password does not match the confirm password.
                             </div>
                         </div>
-                    <button class="fluid ui primary button disable" type="submit" name="submit">Register</button>
+                    <button class="fluid ui primary button disabled" type="submit" name="submit">Register</button>
                 </form>
             </div>
         </div>
@@ -256,10 +256,12 @@
             var confirmPassword = $('.tab.segment.active input.confirmPassword').val();
 
             if(password === confirmPassword){
-                $('.tab.segment.active button[type=submit]').removeClass("disable");
+                $('.tab.segment.active input.confirmPassword').addClass("error");
+                $('.tab.segment.active button[type=submit]').removeClass("disabled");
                 $('.tab.segment.active .password-error').fadeIn();
             } else{
-                $('.tab.segment.active button[type=submit]').addClass("disable");
+                $('.tab.segment.active input.confirmPassword').removeClass("error");
+                $('.tab.segment.active button[type=submit]').addClass("disabled");
                 $('.tab.segment.active .password-error').fadeOut();
             }
         });
