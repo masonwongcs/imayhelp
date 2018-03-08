@@ -250,35 +250,37 @@
 <script type="application/javascript" src="js/main.js"></script>
 <script>
 
-    $('.tab.segment.user.active input.confirmPassword').blur(function(){
-        var password = $('.tab.segment.user.active input.password').val();
-        var confirmPassword = $('.tab.segment.user.active input.confirmPassword').val();
+    $('.ui.tabular.menu .item').click(function(){
+        $('.tab.segment.user.active input.confirmPassword').blur(function(){
+            var password = $('.tab.segment.user.active input.password').val();
+            var confirmPassword = $('.tab.segment.user.active input.confirmPassword').val();
 
-        if(password === confirmPassword){
-            $('.tab.segment.user.active input.confirmPassword').parents("field").removeClass("error");
-            $('.tab.segment.user.active button[type=submit]').removeClass("disabled");
-            $('.tab.segment.user.active .password-error').fadeOut();
-        } else{
-            $('.tab.segment.user.active input.confirmPassword').parents("field").addClass("error");
-            $('.tab.segment.user.active button[type=submit]').addClass("disabled");
-            $('.tab.segment.user.active .password-error').fadeIn();
-        }
-    });
+            if(password === confirmPassword){
+                $('.tab.segment.user.active input.confirmPassword').parents("field").removeClass("error");
+                $('.tab.segment.user.active button[type=submit]').removeClass("disabled");
+                $('.tab.segment.user.active .password-error').fadeOut();
+            } else{
+                $('.tab.segment.user.active input.confirmPassword').parents("field").addClass("error");
+                $('.tab.segment.user.active button[type=submit]').addClass("disabled");
+                $('.tab.segment.user.active .password-error').fadeIn();
+            }
+        });
 
-    $('.tab.segment.company.active input.confirmPassword').blur(function(){
-        var password = $('.tab.segment.company.active input.password').val();
-        var confirmPassword = $('.tab.segment.company.active input.confirmPassword').val();
+        $('.tab.segment.company.active input.confirmPassword').blur(function(){
+            var password = $('.tab.segment.company.active input.password').val();
+            var confirmPassword = $('.tab.segment.company.active input.confirmPassword').val();
 
-        if(password === confirmPassword){
-            $('.tab.segment.company.active input.confirmPassword').parent("div").removeClass("error");
-            $('.tab.segment.company.active button[type=submit]').removeClass("disabled");
-            $('.tab.segment.company.active .password-error').fadeOut();
-        } else{
-            $('.tab.segment.company.active input.confirmPassword').parent("div").addClass("error");
-            $('.tab.segment.company.active button[type=submit]').addClass("disabled");
-            $('.tab.segment.company.active .password-error').fadeIn();
-        }
-    });
+            if(password === confirmPassword){
+                $('.tab.segment.company.active input.confirmPassword').parent("div").removeClass("error");
+                $('.tab.segment.company.active button[type=submit]').removeClass("disabled");
+                $('.tab.segment.company.active .password-error').fadeOut();
+            } else{
+                $('.tab.segment.company.active input.confirmPassword').parent("div").addClass("error");
+                $('.tab.segment.company.active button[type=submit]').addClass("disabled");
+                $('.tab.segment.company.active .password-error').fadeIn();
+            }
+        });
+    });    
 </script>
 </body>
 </html>
