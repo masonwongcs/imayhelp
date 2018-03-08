@@ -136,9 +136,15 @@
                             <input required="required"  type="email" name="email" placeholder="E-mail address">
                         </div>
                         <div class="field">
-                            <input required="required"  type="password" name="password" placeholder="Password">
+                            <input required="required" class="password" type="password" name="password" placeholder="Password">
                         </div>
-                    <button class="fluid ui primary button" type="submit" name="submit">Register</button>
+                        <div class="field">
+                            <input required="required" class="confirmPassword" type="password" placeholder="Confirm Password">
+                            <div class="password-error hide ui left pointing red basic label">
+                              Password does not match the confirm password.
+                            </div>
+                        </div>
+                    <button class="fluid ui primary button disable" type="submit" name="submit">Register</button>
                 </form>
             </div>
 			
@@ -220,12 +226,18 @@
                     </div>
                     <h4 class="ui dividing header">Login Information</h4>
                         <div class="field">
-                            <input required="required"  type="email" name="email" placeholder="E-mail address">
+                            <input required="required" type="email" name="email" placeholder="E-mail address">
                         </div>
                         <div class="field">
-                            <input required="required"  type="password" name="password" placeholder="Password">
+                            <input required="required" class="password" type="password" name="password" placeholder="Password">
                         </div>
-                    <button class="fluid ui primary button" type="submit" name="submit">Register</button>
+                        <div class="field">
+                            <input required="required" class="confirmPassword" type="password" placeholder="Confirm Password">
+                            <div class="password-error hide ui left pointing red basic label">
+                              Password does not match the confirm password.
+                            </div>
+                        </div>
+                    <button class="fluid ui primary button disable" type="submit" name="submit">Register</button>
                 </form>
             </div>
         </div>
@@ -236,5 +248,22 @@
 <script type="application/javascript" src="js/semantic.min.js"></script>
 <script type="application/javascript" src="js/slider.min.js"></script>
 <script type="application/javascript" src="js/main.js"></script>
+<script>
+    $(document).ready(function(){
+
+        $('.tab.segment.active input.confirmPassword').blur(function(){
+            var password = $('.tab.segment.active input.password').val();
+            var confirmPassword = $('.tab.segment.active input.confirmPassword').val();
+
+            if(password === confirmPassword){
+                $('.tab.segment.active button[type=submit]').removeClass("disable");
+                $('.tab.segment.active .password-error').fadeIn();
+            } else{
+                $('.tab.segment.active button[type=submit]').addClass("disable");
+                $('.tab.segment.active .password-error').fadeOut();
+            }
+        });
+    });
+</script>
 </body>
 </html>
