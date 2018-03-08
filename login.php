@@ -271,11 +271,11 @@
             var confirmPassword = $('.tab.segment.company.active input.confirmPassword').val();
 
             if(password === confirmPassword){
-                $('.tab.segment.company.active input.confirmPassword').parents("field").removeClass("error");
+                $('.tab.segment.company.active input.confirmPassword').parent("div").removeClass("error");
                 $('.tab.segment.company.active button[type=submit]').removeClass("disabled");
                 $('.tab.segment.company.active .password-error').fadeIn();
             } else{
-                $('.tab.segment.company.active input.confirmPassword').parents("field").addClass("error");
+                $('.tab.segment.company.active input.confirmPassword').parent("div").addClass("error");
                 $('.tab.segment.company.active button[type=submit]').addClass("disabled");
                 $('.tab.segment.company.active .password-error').fadeOut();
             }
