@@ -91,14 +91,7 @@ session_start();
             <i class="dropdown icon"></i>
             <div class="menu">';
 
-            if($_SESSION['email'] == "Admin"){
-                echo '<a class="item" href="admin.php">
-                    <i class="address card icon"></i>
-                    <span>Admin Panel</span>
-                </a>';
-            }
-
-            if($_SESSION['email'] == "Alex"){
+            if($_SESSION['email'] == "Admin" || $_SESSION['email'] == "Alex"){
                 echo '<a class="item" href="admin.php">
                     <i class="address card icon"></i>
                     <span>Admin Panel</span>
@@ -109,7 +102,10 @@ session_start();
                     <i class="user icon"></i>
                     <span>Profile</span>
                 </a>
-
+                <a class="item" href="mypost.php">
+                    <i class="book icon"></i>
+                    <span>My Post</span>
+                </a>
                 <a class="item" href="wishlist.php">
                     <i class="heart icon"></i>
                     <span>Wishlist</span>

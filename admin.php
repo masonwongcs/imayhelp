@@ -44,17 +44,10 @@
             <?php include 'header.php';?>
             <?php
                 if (isset($_SESSION['email'])) {
-                    if($_SESSION['email'] == "Admin"){
+                    if($_SESSION['email'] == "Admin" || $_SESSION['email'] == "Alex"){
                         //Display admin stuff
                         include 'adminContentTab.php';
                     } 
-
-                    else if($_SESSION['email'] == "Alex"){
-                        //Display admin stuff
-                        include 'adminContentTab.php';
-                    
-                    }
-                    
                     else{
                         echo '<div class="ui red inverted segment">You have no permission to view this page.</div>';
                     }
