@@ -98,19 +98,24 @@ session_start();
                 </a>';
             }
 
-            echo  '<a class="item" href="profile.php">
+            if($_SESSION['email'] == "Alex"){
+                echo '<a class="item" href="admin.php">
+                    <i class="address card icon"></i>
+                    <span>Admin Panel</span>
+                </a>';
+            }
+
+            echo  ' <a class="item" href="profile.php">
                     <i class="user icon"></i>
                     <span>Profile</span>
                 </a>
-                <a class="item" href="mypost.php">
-                    <i class="book icon"></i>
-                    <span>My Post</span>
-                </a>
+
                 <a class="item" href="wishlist.php">
                     <i class="heart icon"></i>
                     <span>Wishlist</span>
                 </a>
-                <a class="item" href="password.php">
+
+            <a class="item" href="password.php">
                     <i class="lock icon"></i>
                     <span>Change Password</span>
                 </a>

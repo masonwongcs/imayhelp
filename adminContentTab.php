@@ -1,7 +1,11 @@
  <?php
-if($_SESSION['email'] != "Admin"){
-	header ("location:error.php");	
-}
+if($_SESSION['email'] != "Admin"){}
+
+	else if($_SESSION['email'] != "Alex"){}
+
+	else{
+		header ("location:error.php");	
+	}
 ?>
 <div class="ui top attached tabular menu">
   <div class="active item" data-tab="item">Service List</div>
