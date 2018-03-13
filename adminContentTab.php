@@ -1,4 +1,4 @@
- <?php
+<?php
 if($_SESSION['email'] != "Admin" || $_SESSION['email'] != "Alex"){
 	header ("location:error.php");
 }
