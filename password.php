@@ -61,6 +61,9 @@
                 <div class="field">
                     <div class="sixteen wide field ui input">
                       <input type="password" name="confirmNewPassword" placeholder="Confirm New Password" required="required">
+                      <div class="password-error ui pointing red basic label" style="display: none;">
+                        Password does not match the confirm password.
+                      </div>
                     </div>
                 </div>
                 <input type="hidden" name="email" placeholder="E-mail address" value="<?php echo $email;?>">
@@ -86,18 +89,20 @@
       $('.updateBtn').addClass("disabled");
       $('input[name=oldPassword]').parents('.ui.input').addClass('error');
     }
-  })
+  });
   
   $('input[name=confirmNewPassword]').blur(function(){
     var newPassword = $('input[name=newPassword]').val();
     if(newPassword === $('input[name=confirmNewPassword]').val()){
       $('.updateBtn').removeClass("disabled");
       $('input[name=confirmNewPassword]').parents('.ui.input').removeClass('error');
+      $('.password-error').fadeOut();
     } else{
       $('.updateBtn').addClass("disabled");
       $('input[name=confirmNewPassword]').parents('.ui.input').addClass('error');
+      $('.password-error').fadeIn();
     }
-  })
+  });
 
 </script>
 </body>
