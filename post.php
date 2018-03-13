@@ -23,7 +23,7 @@
 						<div class="field">
                             <label>Image</label>
                             <input type="hidden" name="MAX_FILE_SIZE" value="1048576" /> 
-                            <input type="file" name="upload" id="upload" placeholder="Upload an image">
+                            <input type="file" name="upload" id="upload" placeholder="Upload an image" required="required">
                             <div class="hide upload-preview-wrapper">
                                 <div class="ui fluid image">
                                   <img class="upload-preview" src="#">
@@ -33,12 +33,12 @@
 						
                         <div class="field">
                             <label>Description</label>
-                            <textarea name="desc"></textarea>
+                            <textarea name="desc" required="required"></textarea>
                         </div>
                         <div class="field">
                             <label>Location</label>
                             <div class="ui fluid search selection dropdown">
-                                <input type="hidden" name="location" readonly="readonly">
+                                <input type="hidden" name="location" readonly="readonly" required="required">
                                 <i class="dropdown icon"></i>
                                 <div class="default text">Please choose your service area location.</div>
                                 <div class="menu">
@@ -64,7 +64,7 @@
 						 <div class="field">
                             <label>Area</label>
                             <div class="ui fluid search selection dropdown area">
-                                <input type="hidden" name="area" readonly="readonly">
+                                <input type="hidden" name="area" readonly="readonly" required="required">
                                 <i class="dropdown icon"></i>
                                 <div class="default text">Please choose your service area.</div>
                                 <div class="menu">

@@ -64,7 +64,7 @@
                         <label>Phone Number</label>
                         <div class="fields">
                             <div class="sixteen wide field">
-                                <input required="required"  type="tel" name="phone" placeholder="Phone Number" pattern= "[0-9]">
+                                <input required="required"  type="tel" name="phone" placeholder="Phone Number" pattern= "[0-9]+">
                             </div>
                         </div>
                     </div>
@@ -136,7 +136,7 @@
                             <input required="required"  type="email" name="email" placeholder="E-mail address">
                         </div>
                         <div class="field">
-                            <input required="required" class="password" type="password" name="password" placeholder="Password">
+                            <input required="required" class="password" type="password" name="password" placeholder="Password" pattern="[^.(?=.{8,})(?=..[0-9])(?=.[a-z])(?=.[A-Z])(?=.[@#$%^&+=]).$]">
                         </div>
                         <div class="field">
                             <input required="required" class="confirmPassword" type="password" placeholder="Confirm Password">
@@ -171,7 +171,7 @@
                         <label>Phone Number</label>
                         <div class="fields">
                             <div class="sixteen wide field">
-                                <input required="required"  type="tel" name="phone" placeholder="Phone Number" pattern= "[0-9]">
+                                <input required="required"  type="tel" name="phone" placeholder="Phone Number" pattern= "[0-9]+">
                             </div>
                         </div>
                     </div>
@@ -186,7 +186,7 @@
                     <div class="field">
                         <label>Location</label>
                         <div class="ui fluid search selection dropdown">
-                            <input required="required"  type="hidden" name="location" readonly="readonly">
+                            <input required="required"  type="hidden" name="location" readonly="readonly" input required="required" >
                             <i class="dropdown icon"></i>
                             <div class="default text">Select Location</div>
                             <div class="menu">
@@ -229,7 +229,7 @@
                             <input required="required" type="email" name="email" placeholder="E-mail address">
                         </div>
                         <div class="field">
-                            <input required="required" class="password" type="password" name="password" placeholder="Password">
+                            <input required="required" class="password" type="password" name="password" placeholder="Password" pattern="[^.(?=.{8,})(?=..[0-9])(?=.[a-z])(?=.[A-Z])(?=.[@#$%^&+=]).$]">
                         </div>
                         <div class="field">
                             <input required="required" class="confirmPassword" type="password" placeholder="Confirm Password">
