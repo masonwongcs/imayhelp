@@ -10,14 +10,15 @@ session_start();
         <div class="menu">
             <a class="item" href="searchType.php?type=Agent&page=1">Agent</a>
             <a class="item" href="searchType.php?type=Consultant&page=1">Consultant</a>  
-            <a class="item" href="searchType.php?type=Agent&page=1">Event and Function planner</a>
-            <a class="item" href="searchType.php?type=Insturctor&page=1">Fitness Instructor</a>
-            <a class="item" href="searchType.php?type=Home&page=1">Designer Graphic</a>
-            <a class="item" href="searchType.php?type=Home&page=1">Designer Name Card</a>
+            <a class="item" href="searchType.php?type=EventandFunction planner&page=1">Event and Function planner</a>
+            <a class="item" href="searchType.php?type=FitnessInstructor&page=1">Fitness Instructor</a>
+            <a class="item" href="searchType.php?type=DesignerGraphic&page=1">Designer Graphic</a>
+            <a class="item" href="searchType.php?type=DesignerNameCard&page=1">Designer Name Card</a>
+            <a class="item" href="searchType.php?type=HouseMoving&page=1">House Moving</a>
             <a class="item" href="searchType.php?type=ITTechnician&page=1">IT Technician</a>
-            <a class="item" href="searchType.php?type=Lifestyle&page=1">Makeup Artist</a>
+            <a class="item" href="searchType.php?type=MakeupArtist&page=1">Makeup Artist</a>
             <a class="item" href="searchType.php?type=Lifestyle&page=1">Lifestyle</a>
-            <a class="item" href="searchType.php?type=Agent&page=1">Wedding planner</a>
+            <a class="item" href="searchType.php?type=Weddingplanner&page=1">Wedding planner</a>
 
 
         </div>

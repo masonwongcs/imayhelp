@@ -15,32 +15,26 @@
    <div class="ui divider"></div>
     <div class="ui grid">
         <center><div class="four wide column"></center>
-            <center><img class="ui fluid image" src="img/about.png"><center>
+            <center><img class="ui fluid image" src="img/aboutus.jpg"><center>
         </div>
         <div class="ui grid">
             <div class="sixteen wide column contact-info">
                 <div class="ui segment">
                     <center class="ui header">  </center>
                     <div class="sub header">
-                        <center><h3>This website provide customer more choices, companies can promote advertisement increase the population<h3> </center>
-                        <div class="sub header">
-                        <center> <div> > have multiple of company provide the same services here, customer can choose the one which is match with the customers requirement.<div>
-                           <div> > Since the choices have increases, customers can comparing the service rate between companies, choose the services rate which customer affordable. <div>
-                               <div></div>
-                             <div> > Rate the company services, professional level, user can give feedback to the company.<div>
-                                 <div></div>
-                                 <div> > Customers are allow to rating, comment the services of the company.<div>
-                                     <div></div> </center>
-                           <div> <center>In this platform user can select current area, needed services, and quotation. Beside that user can check the services provider profile.
-                                In the service provider page will display the contact number. User can direct call to the professional to deal.</center></div>
-
-
-
-
+                       <center><h2>Connecting people to the  freelancer or company, just in few click.<h2> </center>
                         </div>
-                    </div>
-                </div>
-				
+                   </div>
+
+                        <div class="ui segment">
+                           
+                                <div class="sub header">
+                       <h4>1.   Search professional base on your requirement</h4>
+                       <h4>2.   Meet the professional</h4>
+                       <h4>3.   Deal with the professional</h4>
+                       <h4>4.   Get your thing done.</h4>
+                        </div>
+				        </div>
 				
 
                 <script type="application/javascript" src="js/jquery-3.2.1.min.js"></script>

@@ -123,10 +123,18 @@
                             <div class="menu">
                                 <div class="item" data-value="Agent">Agent</div>
                                 <div class="item" data-value="Consultant">Consultant</div>
-                                <div class="item" data-value="Insturctor">Insturctor</div>
-                                <div class="item" data-value="Home">Home and Office</div>
+                                <div class="item" data-value="Event and Function planner">Event and Function planner</div>
+                                <div class="item" data-value="Fitness Instructor">Fitness Instructor</div>
+                                <div class="item" data-value="Designer Graphic">Designer Graphic</div>
+                                <div class="item" data-value="Designer Name Card">Designer Name Card</div>
+                                <div class="item" data-value="House Moving">House Moving</div>
+                                <div class="item" data-value="IT Technician">IT Technician</div>
+                                <div class="item" data-value="Makeup Artist">Makeup Artist</div>
                                 <div class="item" data-value="Lifestyle">Lifestyle</div>
-                                <div class="item" data-value="ITTechnician">IT Technician</div>
+                                <div class="item" data-value="Wedding planner">Wedding planner</div>
+
+
+
                             </div>
                         </div>
                     </div>
@@ -217,10 +225,15 @@
                             <div class="menu">
                                 <div class="item" data-value="Agent">Agent</div>
                                 <div class="item" data-value="Consultant">Consultant</div>
-                                <div class="item" data-value="Insturctor">Insturctor</div>
-                                <div class="item" data-value="Home">Home and Office</div>
+                                <div class="item" data-value="EventandFunction planner">Event and Function planner</div>
+                                <div class="item" data-value="FitnessInstructor">Fitness Instructor</div>
+                                <div class="item" data-value="DesignerGraphic">Designer Graphic</div>
+                                <div class="item" data-value="DesignerNameCard">Designer Name Card</div>
+                                <div class="item" data-value="HouseMoving">House Moving</div>
+                                <div class="item" data-value="ITTechnician">IT Technician</div>
+                                <div class="item" data-value="MakeupArtist">Makeup Artist</div>
                                 <div class="item" data-value="Lifestyle">Lifestyle</div>
-                                <div class="item" data-value="Technician">IT Technician</div>
+                                <div class="item" data-value="WeddingPlanner">Wedding Planner</div>
                             </div>
                         </div>
                     </div>
