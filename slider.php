@@ -6,10 +6,10 @@
                     <img src="img/mayihu.jpg" alt="banner"/>
                 </div>
                 <div class="slide-item items">
-                    <img src="img/banner1.png" alt="banner"/>
+                    <img src="img/banner1.jpg" alt="banner"/>
                 </div>
                 <div class="slide-item items">
-                    <img src="img/banner2.png" alt="banner"/>
+                    <img src="img/banner2.jpg" alt="banner"/>
                 </div>
                 <div class="slide-item items">
                     <img src="img/banner3.jpg" alt="banner"/>
