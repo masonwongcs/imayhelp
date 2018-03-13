@@ -61,9 +61,9 @@
                 <div class="field">
                     <div class="sixteen wide field ui input">
                       <input type="password" name="confirmNewPassword" placeholder="Confirm New Password" required="required">
-                      <div class="password-error ui pointing red basic label" style="display: none;">
-                        Password does not match the confirm password.
-                      </div>
+                    </div>
+                    <div class="password-error ui pointing red basic label" style="display: none;">
+                      Password does not match the confirm password.
                     </div>
                 </div>
                 <input type="hidden" name="email" placeholder="E-mail address" value="<?php echo $email;?>">
