@@ -98,7 +98,7 @@ session_start();
                 </a>';
             }
 
-            echo  ' <a class="item" href="profile.php">
+            echo '<a class="item" href="profile.php">
                     <i class="user icon"></i>
                     <span>Profile</span>
                 </a>
