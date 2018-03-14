@@ -291,6 +291,55 @@
             $('.tab.segment.company .password-error').fadeIn();
         }
     });
+
+    $('.tab.segment.user form')
+     .form({
+      on: 'blur',
+      fields: {
+       dropdown: {
+        identifier: 'country',
+        rules: [{
+         type: 'empty',
+         prompt: 'Please select a location'
+        }]
+       },
+       dropdown: {
+        identifier: 'gender',
+        rules: [{
+         type: 'empty',
+         prompt: 'Please select a gender'
+        }]
+       },
+       dropdown: {
+        identifier: 'services',
+        rules: [{
+         type: 'empty',
+         prompt: 'Please select a service'
+        }]
+       },
+      }
+     });
+
+     $('.tab.segment.company form')
+     .form({
+      on: 'blur',
+      fields: {
+       dropdown: {
+        identifier: 'location',
+        rules: [{
+         type: 'empty',
+         prompt: 'Please select a location'
+        }]
+       },
+       dropdown: {
+        identifier: 'services',
+        rules: [{
+         type: 'empty',
+         prompt: 'Please select a service'
+        }]
+       },
+      }
+     });
 </script>
 </body>
 </html>
