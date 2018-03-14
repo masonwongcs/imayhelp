@@ -155,7 +155,7 @@
                         </div>
                         <div class="field">
                             <label>Contact</label>
-                            <input type="tel" name="contactno" placeholder="Phone Number" required="required" value="<?php echo $contact; ?>">
+                            <input type="tel" name="contactno" placeholder="012345678" required="required" value="<?php echo $contact; ?>">
                         </div>
                         <div class="ui indicating progress" id="progress">
                           <div class="bar"></div>

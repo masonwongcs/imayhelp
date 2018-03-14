@@ -79,7 +79,7 @@
                         </div>
                         <div class="field">
                             <label>Contact</label>
-                            <input type="tel" name="contactno" placeholder="Phone Number" required="required">
+                            <input type="tel" name="contactno" placeholder="012345678" required="required">
                         </div>
                         <div class="field">
                             <div class="ui checkbox">

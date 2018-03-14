@@ -20,7 +20,7 @@
         <label>Phone Number</label>
         <div class="fields">
             <div class="sixteen wide field">
-                <input type="tel" name="phone" placeholder="Phone Number" value="<?php echo $mobileNo;?>" required="required">
+                <input type="tel" name="phone" placeholder="012345678" value="<?php echo $mobileNo;?>" required="required">
             </div>
         </div>
     </div>

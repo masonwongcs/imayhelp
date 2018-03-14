@@ -64,7 +64,7 @@
                         <label>Phone Number</label>
                         <div class="fields">
                             <div class="sixteen wide field">
-                                <input required="required"  type="tel" name="phone" placeholder="Phone Number" pattern= "[0-9]+">
+                                <input required="required"  type="tel" name="phone" placeholder="012345678" pattern= "[0-9]+">
                             </div>
                         </div>
                     </div>
@@ -179,7 +179,7 @@
                         <label>Phone Number</label>
                         <div class="fields">
                             <div class="sixteen wide field">
-                                <input required="required"  type="tel" name="phone" placeholder="Phone Number" pattern= "[0-9]+">
+                                <input required="required"  type="tel" name="phone" placeholder="012345678" pattern= "[0-9]+">
                             </div>
                         </div>
                     </div>
