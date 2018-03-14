@@ -4,10 +4,10 @@
         <label>Name</label>
         <div class="two fields">
             <div class="field">
-                <input type="text" name="firstname" placeholder="First Name" value="<?php echo $firstName;?>">
+                <input type="text" name="firstname" placeholder="First Name" value="<?php echo $firstName;?>" required="required">
             </div>
             <div class="field">
-                <input type="text" name="lastname" placeholder="Last Name" value="<?php echo $lastName;?>">
+                <input type="text" name="lastname" placeholder="Last Name" value="<?php echo $lastName;?>" required="required">
             </div>
         </div>
     </div>
@@ -15,7 +15,7 @@
         <label>Phone Number</label>
         <div class="fields">
             <div class="sixteen wide field">
-                <input type="tel" name="phone" placeholder="Phone Number" value="<?php echo $mobileNo;?>">
+                <input type="tel" name="phone" placeholder="Phone Number" value="<?php echo $mobileNo;?>" required="required">
             </div>
         </div>
     </div>
@@ -23,7 +23,7 @@
         <label>Address</label>
         <div class="fields">
             <div class="sixteen wide field">
-                <input type="text" name="address" placeholder="Street Address" value="<?php echo $address;?>">
+                <input type="text" name="address" placeholder="Street Address" value="<?php echo $address;?>" required="required">
             </div>
         </div>
     </div>

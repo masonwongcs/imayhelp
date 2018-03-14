@@ -4,7 +4,7 @@
         <label>SSM Account</label>
         <div class="fields">
             <div class="sixteen wide field">
-                <input type="text" name="Acc" placeholder="Acc SSM" value="<?php echo $acc_SSM;?>">
+                <input type="text" name="Acc" placeholder="Acc SSM" value="<?php echo $acc_SSM;?>" required="required">
             </div>
         </div>
     </div>
@@ -12,7 +12,7 @@
         <label>Company Name</label>
         <div class="fields">
             <div class="sixteen wide field">
-                <input type="tel" name="name" placeholder="Company Name" value="<?php echo $company_name;?>">
+                <input type="tel" name="name" placeholder="Company Name" value="<?php echo $company_name;?>" required="required">
             </div>
         </div>
     </div>
@@ -20,7 +20,7 @@
         <label>Phone Number</label>
         <div class="fields">
             <div class="sixteen wide field">
-                <input type="tel" name="phone" placeholder="Phone Number" value="<?php echo $mobileNo;?>">
+                <input type="tel" name="phone" placeholder="Phone Number" value="<?php echo $mobileNo;?>" required="required">
             </div>
         </div>
     </div>
@@ -28,7 +28,7 @@
         <label>Address</label>
         <div class="fields">
             <div class="sixteen wide field">
-                <input type="text" name="address" placeholder="Street Address" value="<?php echo $address;?>">
+                <input type="text" name="address" placeholder="Street Address" value="<?php echo $address;?>" required="required">
             </div>
         </div>
     </div>
