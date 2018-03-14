@@ -79,7 +79,7 @@
                     <div class="field">
                         <label>Location</label>
                         <div class="ui fluid search selection dropdown">
-                            <input required="required"  type="hidden" name="country" readonly="readonly">
+                            <input required="required"  type="hidden" name="country">
                             <i class="dropdown icon"></i>
                             <div class="default text">Select Location</div>
                             <div class="menu">
@@ -292,54 +292,23 @@
         }
     });
 
-    $('.tab.segment.user form')
-     .form({
-      on: 'blur',
-      fields: {
-       dropdown: {
-        identifier: 'country',
-        rules: [{
-         type: 'empty',
-         prompt: 'Please select a location'
-        }]
-       },
-       dropdown: {
-        identifier: 'gender',
-        rules: [{
-         type: 'empty',
-         prompt: 'Please select a gender'
-        }]
-       },
-       dropdown: {
-        identifier: 'services',
-        rules: [{
-         type: 'empty',
-         prompt: 'Please select a service'
-        }]
-       },
-      }
-     });
 
-     $('.tab.segment.company form')
-     .form({
-      on: 'blur',
-      fields: {
-       dropdown: {
-        identifier: 'location',
-        rules: [{
-         type: 'empty',
-         prompt: 'Please select a location'
-        }]
-       },
-       dropdown: {
-        identifier: 'services',
-        rules: [{
-         type: 'empty',
-         prompt: 'Please select a service'
-        }]
-       },
-      }
-     });
+
+    $('.tab.segment.user form').form({
+        fields: {
+          country: 'empty',
+          gender: 'empty',
+          services: 'empty'
+        }
+    });
+
+    $('.tab.segment.company form').form({
+        fields: {
+          location: 'empty',
+          services: 'empty'
+        }
+    });
+
 </script>
 </body>
 </html>

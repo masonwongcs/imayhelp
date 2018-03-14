@@ -103,18 +103,15 @@
 <script type="application/javascript" src="js/slider.min.js"></script>
 <script type="application/javascript" src="js/main.js"></script>
 <script>
+
     $('.ui.form').form({
         fields: {
-          fileInput:{
-            identifier: 'name',
-            rules: [
-              {
-                type : 'empty'
-              }
-            ]
-          }
+          name: 'empty',
+          location: 'empty',
+          area: 'empty'
         }
     });
+    
     function readURL(input) {
 
         var MAX_FILE_SIZE = 1048576;
