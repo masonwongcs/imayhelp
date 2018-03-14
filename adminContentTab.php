@@ -70,7 +70,7 @@
 		 </tbody>
 	</table>
 </div>
-<div class="ui bottom attached tab segment" data-tab="user">
+<div class="ui bottom attached tab segment" data-tab="user" style="overflow: auto;">
 	<table class="ui celled table">
 	  <thead>
 	    <tr>
@@ -130,5 +130,7 @@
 </div>
 <?php
 if($_SESSION['email'] != "Admin" || $_SESSION['email'] != "Alex"){
-	header ("location:error.php");
+	echo "<script type=\"text/javascript\">
+            location.href = \"error.php\";
+        </script>";
 }?>
