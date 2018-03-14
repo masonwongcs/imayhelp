@@ -129,7 +129,7 @@
 	</table>
 </div>
 <?php
-if($_SESSION['email'] != "Admin" || $_SESSION['email'] != "Alex"){
+if($_SESSION['email'] != "Admin"){
 	echo "<script type=\"text/javascript\">
             location.href = \"error.php\";
         </script>";
