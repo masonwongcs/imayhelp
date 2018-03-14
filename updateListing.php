@@ -1,10 +1,6 @@
 <?php
 include ('connection.php');
 
-if (isset($_SESSION['email'])) {
-    $email = $_SESSION['email'];
-}
-
 if(isset($_POST['submit'])) {
 	//assign textbox to variable
 	$service_id=$_POST['service-id'];
@@ -14,6 +10,13 @@ if(isset($_POST['submit'])) {
 	$area=$_POST['area'];
 	$price=$_POST['price'];
 	$contactno=$_POST['contactno'];
+
+
+	if (isset($_SESSION['email'])) {
+	    $email = $_SESSION['email'];
+	} else{
+		$email = '';
+	}
 }
 
 $queryUser = "SELECT * FROM `register_user` WHERE email = '$email'";
@@ -47,9 +50,7 @@ $result = mysqli_query($link, "UPDATE post
 		header ("location:listing.php?serviceId=" . $service_id);
 	}
 	else{
-        // header ("location:error.php");
+        header ("location:error.php");
 	}
  mysqli_close($link); 	 
-
- $_SESSION['email'] = $email;
 ?>
