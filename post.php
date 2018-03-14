@@ -111,7 +111,7 @@
           area: 'empty'
         }
     });
-    
+
     function readURL(input) {
 
         var MAX_FILE_SIZE = 1048576;
@@ -152,6 +152,12 @@
                     // if not checked
                     submitable = false;
                 }
+            }
+        })
+
+        $('.dropdown input[type=hidden]').each(function(){
+            if($(this).val() === "" || $(this).val() === "/1" ){
+                submitable = false;
             }
         })
 

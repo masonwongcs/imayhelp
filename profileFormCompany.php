@@ -1,4 +1,4 @@
-<form class="ui form" action="updateProfile_company.php" method="post">
+<form class="ui form update-company-profile" action="updateProfile_company.php" method="post">
     <h4 class="ui dividing header">Update Company Information</h4>
     <div class="field">
         <label>SSM Account</label>

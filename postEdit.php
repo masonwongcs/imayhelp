@@ -114,7 +114,7 @@
                         <div class="field">
                             <label>Location</label>
                             <div class="ui fluid search selection dropdown">
-                                <input type="hidden" name="location" readonly="readonly" value="/<?php echo $location; ?>">
+                                <input type="hidden" name="location" readonly="readonly" value="<?php echo str_replace("/", "", "$location"); ?>">
                                 <i class="dropdown icon"></i>
                                 <div class="default text">Please choose your service area location.</div>
                                 <div class="menu">
@@ -173,20 +173,18 @@
 <script type="application/javascript" src="js/slider.min.js"></script>
 <script type="application/javascript" src="js/main.js"></script>
 <script>
-    loadAreaByState('<?php echo $location; ?>');
+
+    var locationArea = '<?php echo $location; ?>'.replace(/\//g, '');
+    loadAreaByState(parseInt(locationArea));
 
     $('.ui.form').form({
         fields: {
-          fileInput:{
-            identifier: 'name',
-            rules: [
-              {
-                type : 'empty'
-              }
-            ]
-          }
+          name: 'empty',
+          location: 'empty',
+          area: 'empty'
         }
     });
+
     function readURL(input) {
 
         var MAX_FILE_SIZE = 1048576;
@@ -263,6 +261,12 @@
                     // if not checked
                     submitable = false;
                 }
+            }
+        })
+
+        $('.dropdown input[type=hidden]').each(function(){
+            if($(this).val() === "" || $(this).val() === "/1" ){
+                submitable = false;
             }
         })
 

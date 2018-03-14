@@ -61,5 +61,21 @@
 <script type="application/javascript" src="js/semantic.min.js"></script>
 <script type="application/javascript" src="js/slider.min.js"></script>
 <script type="application/javascript" src="js/main.js"></script>
+<script>
+   $('.ui.form.update-company-profile').form({
+        fields: {
+          location: 'empty',
+          services: 'empty'
+        }
+    });
+
+   $('.ui.form.update-user-profile').form({
+        fields: {
+          country: 'empty',
+          gender: 'empty',
+          services: 'empty'
+        }
+    });
+</script>
 </body>
 </html>

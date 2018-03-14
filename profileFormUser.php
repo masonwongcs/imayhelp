@@ -1,4 +1,4 @@
-<form class="ui form" action="updateProfile.php" method="post">
+<form class="ui form update-user-profile" action="updateProfile.php" method="post">
     <h4 class="ui dividing header">Update User Information</h4>
     <div class="field">
         <label>Name</label>
