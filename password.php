@@ -55,7 +55,7 @@
                 <div class="field">
                     <label>New Password</label>
                     <div class="sixteen wide field ui input">
-                      <input type="password" name="newPassword" placeholder="New Password" required="required">
+                      <input type="password" name="newPassword" placeholder="New Password" required="required" pattern="^(?=.*\d)(?=.*[a-z])(?=.*[A-Z])(?!.*\s).*$" data-content="Password must contain uppercase, lowercase and number">
                     </div>
                 </div>
                 <div class="field">
@@ -102,6 +102,10 @@
       $('input[name=confirmNewPassword]').parents('.ui.input').addClass('error');
       $('.password-error').fadeIn();
     }
+  });
+
+  $('form input[name=newPassword]').popup({
+      on: 'focus'
   });
 
 </script>

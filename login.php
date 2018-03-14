@@ -144,7 +144,7 @@
                             <input required="required"  type="email" name="email" placeholder="E-mail address">
                         </div>
                         <div class="field">
-                            <input required="required" class="password" type="password" name="password" placeholder="Password" pattern="[^.(?=.{8,})(?=..[0-9])(?=.[a-z])(?=.[A-Z])(?=.[@#$%^&+=]).$]">
+                            <input required="required" class="password" type="password" name="password" placeholder="Password" pattern="^(?=.*\d)(?=.*[a-z])(?=.*[A-Z])(?!.*\s).*$" data-content="Password must contain uppercase, lowercase and number">
                         </div>
                         <div class="field">
                             <input required="required" class="confirmPassword" type="password" placeholder="Confirm Password">
@@ -242,7 +242,7 @@
                             <input required="required" type="email" name="email" placeholder="E-mail address">
                         </div>
                         <div class="field">
-                            <input required="required" class="password" type="password" name="password" placeholder="Password" pattern="[^.(?=.{8,})(?=..[0-9])(?=.[a-z])(?=.[A-Z])(?=.[@#$%^&+=]).$]">
+                            <input required="required" class="password" type="password" name="password" placeholder="Password" pattern="^(?=.*\d)(?=.*[a-z])(?=.*[A-Z])(?!.*\s).*$" data-content="Password must contain uppercase, lowercase and number">
                         </div>
                         <div class="field">
                             <input required="required" class="confirmPassword" type="password" placeholder="Confirm Password">
@@ -307,6 +307,14 @@
           location: 'empty',
           services: 'empty'
         }
+    });
+
+    $('.tab.segment.user form input[name=password]').popup({
+        on: 'focus'
+    });
+
+    $('.tab.segment.company form input[name=password]').popup({
+        on: 'focus'
     });
 
 </script>
